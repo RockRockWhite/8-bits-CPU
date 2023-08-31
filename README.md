@@ -3,3 +3,9 @@
 PC MC and bus
 
 ![image-20230829223915458](README.assets/image-20230829223915458.png)
+
+微程序控制器与微命令编程
+
+![image-20230831122415911](README.assets/image-20230831122415911.png)
+
+![image-20230831122257095](README.assets/image-20230831122257095.png)

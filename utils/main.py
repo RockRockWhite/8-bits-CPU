@@ -9,10 +9,7 @@ WE_REG_RES = 2**4
 RE_REG_RES = 2**5
 
 WE_REG_A = 2**6
-RE_REG_A = 2**7
-
-WE_REG_B = 2**8
-RE_REG_B = 2**9
+WE_REG_B = 2**7
 
 PC_INC = 2**10
 PC_WE = 2**11
@@ -24,11 +21,11 @@ WE_MC = 2**14
 HLT = 2**15
 
 micro = [
-    RE_MC | WE_REG_A | PC_RE,
-    PC_RE | PC_INC,
-    RE_MC | WE_REG_B | PC_RE,
-    PC_RE | PC_INC,
-    RE_REG_A | RE_REG_B | WE_REG_RES | ALU_ADD,
+    RE_MC | PC_RE,
+    RE_MC | WE_REG_A | PC_RE | PC_WE | PC_INC,
+    RE_MC | PC_RE,
+    RE_MC | WE_REG_B | PC_RE | PC_WE | PC_INC,
+    WE_REG_RES | ALU_ADD,
     RE_REG_RES | WE_MC | PC_RE,
     HLT,
 ]
