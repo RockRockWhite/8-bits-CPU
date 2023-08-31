@@ -19,11 +19,11 @@ RE_MC = 2**13
 WE_MC = 2**14
 
 HLT = 2**15
+NOP = 0
 
 micro = [
-    RE_MC | PC_RE,
+    NOP,
     RE_MC | WE_REG_A | PC_RE | PC_WE | PC_INC,
-    RE_MC | PC_RE,
     RE_MC | WE_REG_B | PC_RE | PC_WE | PC_INC,
     WE_REG_RES | ALU_ADD,
     RE_REG_RES | WE_MC | PC_RE,
