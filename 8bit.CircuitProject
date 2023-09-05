@@ -4,8 +4,8 @@
 		<lc:ProjectId>df278051-a5de-4400-84bb-2c452a5c2d1f</lc:ProjectId>
 		<lc:Zoom>0.6398876404494381</lc:Zoom>
 		<lc:Frequency>13</lc:Frequency>
-		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
-		<lc:CategoryTextNoteCollapsed>True</lc:CategoryTextNoteCollapsed>
+		<lc:LogicalCircuitId>f591a900-a702-46ce-bb89-6bd9fb359aa3</lc:LogicalCircuitId>
+		<lc:CategoryPrimitivesCollapsed>True</lc:CategoryPrimitivesCollapsed>
 	</lc:Project>
 	<lc:CollapsedCategory>
 		<lc:Name>Flip-flops</lc:Name>
@@ -19,10 +19,6 @@
 	<lc:CollapsedCategory>
 		<lc:Name>ALU</lc:Name>
 	</lc:CollapsedCategory>
-	<lc:CollapsedCategory>
-		<lc:Name>Test</lc:Name>
-	</lc:CollapsedCategory>
-	<lc:CollapsedCategory />
 	<lc:CollapsedCategory>
 		<lc:Name>Basic</lc:Name>
 	</lc:CollapsedCategory>
@@ -361,6 +357,12 @@
 		<lc:Name>Control Unit</lc:Name>
 		<lc:Notation>CU</lc:Notation>
 		<lc:Category>CU</lc:Category>
+	</lc:LogicalCircuit>
+	<lc:LogicalCircuit>
+		<lc:LogicalCircuitId>2edd9265-0932-47f2-bcb9-06ea578f309e</lc:LogicalCircuitId>
+		<lc:Name>PC Test</lc:Name>
+		<lc:Notation>Circuit</lc:Notation>
+		<lc:Category>Test</lc:Category>
 	</lc:LogicalCircuit>
 	<lc:Pin>
 		<lc:PinId>518c9c51-fc5f-4cf9-b6e1-82e8e2ebf604</lc:PinId>
@@ -2021,6 +2023,52 @@
 		<lc:Name>R9</lc:Name>
 		<lc:JamNotation>R9</lc:JamNotation>
 	</lc:Pin>
+	<lc:Pin>
+		<lc:PinId>d74cb4e0-2975-48eb-9a9a-16c8e529d4f6</lc:PinId>
+		<lc:CircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:CircuitId>
+		<lc:Name>Clock</lc:Name>
+		<lc:JamNotation>CL</lc:JamNotation>
+	</lc:Pin>
+	<lc:Pin>
+		<lc:PinId>ebd6ec0f-2c13-4e4e-9553-fdb95dc76298</lc:PinId>
+		<lc:CircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:CircuitId>
+		<lc:BitWidth>4</lc:BitWidth>
+		<lc:Name>PSW</lc:Name>
+		<lc:JamNotation>PSQ</lc:JamNotation>
+	</lc:Pin>
+	<lc:Pin>
+		<lc:PinId>aae37bda-1930-4dba-be3d-c1c052e04493</lc:PinId>
+		<lc:CircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:CircuitId>
+		<lc:BitWidth>8</lc:BitWidth>
+		<lc:Name>IA</lc:Name>
+		<lc:JamNotation>IA</lc:JamNotation>
+	</lc:Pin>
+	<lc:Pin>
+		<lc:PinId>cd391870-c45b-4aab-bd98-4249a86abff9</lc:PinId>
+		<lc:CircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:CircuitId>
+		<lc:PinType>Output</lc:PinType>
+		<lc:PinSide>Top</lc:PinSide>
+		<lc:Name>HLT</lc:Name>
+		<lc:JamNotation>HLT</lc:JamNotation>
+	</lc:Pin>
+	<lc:Pin>
+		<lc:PinId>56bb250e-ce98-47c0-ad48-d31a0daf7f89</lc:PinId>
+		<lc:CircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:CircuitId>
+		<lc:BitWidth>3</lc:BitWidth>
+		<lc:PinType>Output</lc:PinType>
+		<lc:PinSide>Top</lc:PinSide>
+		<lc:Name>PC</lc:Name>
+		<lc:JamNotation>PC</lc:JamNotation>
+	</lc:Pin>
+	<lc:Pin>
+		<lc:PinId>6654e6ee-fa4d-49ad-9829-f87b030580f7</lc:PinId>
+		<lc:CircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:CircuitId>
+		<lc:BitWidth>3</lc:BitWidth>
+		<lc:PinType>Output</lc:PinType>
+		<lc:PinSide>Top</lc:PinSide>
+		<lc:Name>ALU</lc:Name>
+		<lc:JamNotation>ALU</lc:JamNotation>
+	</lc:Pin>
 	<lc:CircuitProbe>
 		<lc:CircuitProbeId>f7f1753f-bbd8-4f7c-8bde-70b7bb5fe17d</lc:CircuitProbeId>
 		<lc:Name>f7f1753f-bbd8-4f7c-8bde-70b7bb5fe17d</lc:Name>
@@ -2169,6 +2217,10 @@
 		<lc:CircuitProbeId>7a275fa3-bc47-49e0-bb54-4a7f52ba1002</lc:CircuitProbeId>
 		<lc:Name>7a275fa3-bc47-49e0-bb54-4a7f52ba1002</lc:Name>
 	</lc:CircuitProbe>
+	<lc:CircuitProbe>
+		<lc:CircuitProbeId>3234a589-82cf-4458-85cb-088f487ddb98</lc:CircuitProbeId>
+		<lc:Name>3234a589-82cf-4458-85cb-088f487ddb98</lc:Name>
+	</lc:CircuitProbe>
 	<lc:Constant>
 		<lc:ConstantId>f3e80f41-cf07-4185-9c62-389d70f39699</lc:ConstantId>
 	</lc:Constant>
@@ -2234,6 +2286,14 @@
 	</lc:Constant>
 	<lc:Constant>
 		<lc:ConstantId>e8a287d7-60ac-491b-b01f-427a5eebc1f0</lc:ConstantId>
+	</lc:Constant>
+	<lc:Constant>
+		<lc:ConstantId>fe5f9c29-0c6b-4758-a12d-4666e7bea687</lc:ConstantId>
+		<lc:Value>1</lc:Value>
+	</lc:Constant>
+	<lc:Constant>
+		<lc:ConstantId>d4217d9b-28aa-49a4-8b48-d7d2b96ce1f8</lc:ConstantId>
+		<lc:BitWidth>8</lc:BitWidth>
 	</lc:Constant>
 	<lc:CircuitButton>
 		<lc:CircuitButtonId>83c28493-b244-446d-95e7-5426d00b83d2</lc:CircuitButtonId>
@@ -2420,21 +2480,6 @@
 		<lc:IsToggle>True</lc:IsToggle>
 	</lc:CircuitButton>
 	<lc:CircuitButton>
-		<lc:CircuitButtonId>33359854-8350-4b29-9d6f-1ad9d5aea690</lc:CircuitButtonId>
-		<lc:IsToggle>True</lc:IsToggle>
-	</lc:CircuitButton>
-	<lc:CircuitButton>
-		<lc:CircuitButtonId>9147f643-23a0-401d-aa5f-bb7de7dc40f0</lc:CircuitButtonId>
-		<lc:IsToggle>True</lc:IsToggle>
-	</lc:CircuitButton>
-	<lc:CircuitButton>
-		<lc:CircuitButtonId>f07e6ac6-dd4c-4f01-99d1-dc86157206ec</lc:CircuitButtonId>
-		<lc:IsToggle>True</lc:IsToggle>
-	</lc:CircuitButton>
-	<lc:CircuitButton>
-		<lc:CircuitButtonId>fa825e3a-4d7e-48c4-97f4-5f212afd0df1</lc:CircuitButtonId>
-	</lc:CircuitButton>
-	<lc:CircuitButton>
 		<lc:CircuitButtonId>e2fc929a-8ca5-4871-bc6d-0fbcf9905a7e</lc:CircuitButtonId>
 	</lc:CircuitButton>
 	<lc:CircuitButton>
@@ -2475,6 +2520,21 @@
 	</lc:CircuitButton>
 	<lc:CircuitButton>
 		<lc:CircuitButtonId>9d231eb2-3dfa-4c5f-b5be-dddede68071f</lc:CircuitButtonId>
+	</lc:CircuitButton>
+	<lc:CircuitButton>
+		<lc:CircuitButtonId>9147f643-23a0-401d-aa5f-bb7de7dc40f0</lc:CircuitButtonId>
+		<lc:IsToggle>True</lc:IsToggle>
+	</lc:CircuitButton>
+	<lc:CircuitButton>
+		<lc:CircuitButtonId>f07e6ac6-dd4c-4f01-99d1-dc86157206ec</lc:CircuitButtonId>
+		<lc:IsToggle>True</lc:IsToggle>
+	</lc:CircuitButton>
+	<lc:CircuitButton>
+		<lc:CircuitButtonId>33359854-8350-4b29-9d6f-1ad9d5aea690</lc:CircuitButtonId>
+		<lc:IsToggle>True</lc:IsToggle>
+	</lc:CircuitButton>
+	<lc:CircuitButton>
+		<lc:CircuitButtonId>fa825e3a-4d7e-48c4-97f4-5f212afd0df1</lc:CircuitButtonId>
 	</lc:CircuitButton>
 	<lc:Memory>
 		<lc:MemoryId>4f72b39e-2afe-45d1-b41e-d65e2182628e</lc:MemoryId>
@@ -2540,8 +2600,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</lc:Data>
 	</lc:Memory>
 	<lc:Memory>
-		<lc:MemoryId>92db659d-8893-4685-96f3-ec5ab6ae9e78</lc:MemoryId>
-		<lc:AddressBitWidth>8</lc:AddressBitWidth>
+		<lc:MemoryId>0421c843-bf98-40cd-876f-9c1fd129da48</lc:MemoryId>
+		<lc:AddressBitWidth>16</lc:AddressBitWidth>
 		<lc:DataBitWidth>32</lc:DataBitWidth>
 	</lc:Memory>
 	<lc:LedMatrix>
@@ -3320,6 +3380,44 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</lc
 		<lc:SplitterId>6c3d1f76-c576-48b5-b969-e3bf67a71c9a</lc:SplitterId>
 		<lc:BitWidth>5</lc:BitWidth>
 		<lc:PinCount>5</lc:PinCount>
+	</lc:Splitter>
+	<lc:Splitter>
+		<lc:SplitterId>2d83b8b2-66d3-4b70-b25c-1ebdb4f8c525</lc:SplitterId>
+		<lc:BitWidth>16</lc:BitWidth>
+		<lc:PinCount>16</lc:PinCount>
+	</lc:Splitter>
+	<lc:Splitter>
+		<lc:SplitterId>c84adb0e-6d90-4872-b1c5-1b952d8f8ee3</lc:SplitterId>
+		<lc:BitWidth>8</lc:BitWidth>
+		<lc:PinCount>2</lc:PinCount>
+	</lc:Splitter>
+	<lc:Splitter>
+		<lc:SplitterId>83200899-2e0e-4971-b3e6-40414f317a5d</lc:SplitterId>
+		<lc:BitWidth>8</lc:BitWidth>
+		<lc:PinCount>2</lc:PinCount>
+		<lc:Clockwise>True</lc:Clockwise>
+	</lc:Splitter>
+	<lc:Splitter>
+		<lc:SplitterId>2c182835-1448-441d-bbb3-867de6675adb</lc:SplitterId>
+		<lc:BitWidth>8</lc:BitWidth>
+		<lc:PinCount>8</lc:PinCount>
+		<lc:Clockwise>True</lc:Clockwise>
+	</lc:Splitter>
+	<lc:Splitter>
+		<lc:SplitterId>8187ae95-61e0-4b67-91ed-148442ed4268</lc:SplitterId>
+		<lc:BitWidth>8</lc:BitWidth>
+		<lc:PinCount>8</lc:PinCount>
+		<lc:Clockwise>True</lc:Clockwise>
+	</lc:Splitter>
+	<lc:Splitter>
+		<lc:SplitterId>a6a5bf5a-49db-4dc7-8e23-7544e281fdc6</lc:SplitterId>
+		<lc:BitWidth>3</lc:BitWidth>
+		<lc:PinCount>3</lc:PinCount>
+	</lc:Splitter>
+	<lc:Splitter>
+		<lc:SplitterId>1b2434c1-8977-4bad-8c7a-7331332379de</lc:SplitterId>
+		<lc:BitWidth>3</lc:BitWidth>
+		<lc:PinCount>3</lc:PinCount>
 	</lc:Splitter>
 	<lc:CircuitSymbol>
 		<lc:CircuitSymbolId>95236771-59dd-4182-bf2b-93cb31db1588</lc:CircuitSymbolId>
@@ -6650,58 +6748,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</lc
 		<lc:Rotation>Left</lc:Rotation>
 	</lc:CircuitSymbol>
 	<lc:CircuitSymbol>
-		<lc:CircuitSymbolId>6318ff17-35a6-44cf-a662-6efe848ff823</lc:CircuitSymbolId>
-		<lc:CircuitId>df56f6e5-4f9b-487e-8b76-3083d65739de</lc:CircuitId>
-		<lc:LogicalCircuitId>452e984d-1356-4da8-93f7-4f23a99b5a87</lc:LogicalCircuitId>
-		<lc:X>19</lc:X>
-		<lc:Y>35</lc:Y>
-	</lc:CircuitSymbol>
-	<lc:CircuitSymbol>
-		<lc:CircuitSymbolId>d77bdf43-1e00-47d1-8983-0b4ffa665d55</lc:CircuitSymbolId>
-		<lc:CircuitId>2128a57a-99a9-4687-8a96-7510ce7d8aa1</lc:CircuitId>
-		<lc:LogicalCircuitId>452e984d-1356-4da8-93f7-4f23a99b5a87</lc:LogicalCircuitId>
-		<lc:X>12</lc:X>
-		<lc:Y>44</lc:Y>
-	</lc:CircuitSymbol>
-	<lc:CircuitSymbol>
-		<lc:CircuitSymbolId>64b156b9-15d2-4030-b521-439407a793bb</lc:CircuitSymbolId>
-		<lc:CircuitId>33359854-8350-4b29-9d6f-1ad9d5aea690</lc:CircuitId>
-		<lc:LogicalCircuitId>452e984d-1356-4da8-93f7-4f23a99b5a87</lc:LogicalCircuitId>
-		<lc:X>30</lc:X>
-		<lc:Y>35</lc:Y>
-		<lc:Rotation>Down</lc:Rotation>
-	</lc:CircuitSymbol>
-	<lc:CircuitSymbol>
-		<lc:CircuitSymbolId>0fbbbf95-84c9-483c-8d4d-a512af711eca</lc:CircuitSymbolId>
-		<lc:CircuitId>9147f643-23a0-401d-aa5f-bb7de7dc40f0</lc:CircuitId>
-		<lc:LogicalCircuitId>452e984d-1356-4da8-93f7-4f23a99b5a87</lc:LogicalCircuitId>
-		<lc:X>30</lc:X>
-		<lc:Y>37</lc:Y>
-		<lc:Rotation>Down</lc:Rotation>
-	</lc:CircuitSymbol>
-	<lc:CircuitSymbol>
-		<lc:CircuitSymbolId>c7df77cb-077c-4dac-8ec8-f25d687ab1bc</lc:CircuitSymbolId>
-		<lc:CircuitId>0a3fdf7a-aaad-444f-b02c-f4938541bc34</lc:CircuitId>
-		<lc:LogicalCircuitId>452e984d-1356-4da8-93f7-4f23a99b5a87</lc:LogicalCircuitId>
-		<lc:X>8</lc:X>
-		<lc:Y>26</lc:Y>
-	</lc:CircuitSymbol>
-	<lc:CircuitSymbol>
-		<lc:CircuitSymbolId>2337e1bf-524b-4298-936a-a1aadf51c820</lc:CircuitSymbolId>
-		<lc:CircuitId>f07e6ac6-dd4c-4f01-99d1-dc86157206ec</lc:CircuitId>
-		<lc:LogicalCircuitId>452e984d-1356-4da8-93f7-4f23a99b5a87</lc:LogicalCircuitId>
-		<lc:X>26</lc:X>
-		<lc:Y>29</lc:Y>
-		<lc:Rotation>Right</lc:Rotation>
-	</lc:CircuitSymbol>
-	<lc:CircuitSymbol>
-		<lc:CircuitSymbolId>a0b70576-91b3-466f-953a-3ebcefcba2a2</lc:CircuitSymbolId>
-		<lc:CircuitId>fa825e3a-4d7e-48c4-97f4-5f212afd0df1</lc:CircuitId>
-		<lc:LogicalCircuitId>452e984d-1356-4da8-93f7-4f23a99b5a87</lc:LogicalCircuitId>
-		<lc:X>10</lc:X>
-		<lc:Y>37</lc:Y>
-	</lc:CircuitSymbol>
-	<lc:CircuitSymbol>
 		<lc:CircuitSymbolId>bf6e31fa-4727-4987-a925-06ca64f66e73</lc:CircuitSymbolId>
 		<lc:CircuitId>b3d171b9-1eea-4690-a612-322f193de82d</lc:CircuitId>
 		<lc:LogicalCircuitId>efe1beb3-3371-4cfe-8fbd-bd65cd0fe290</lc:LogicalCircuitId>
@@ -7154,13 +7200,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</lc
 		<lc:LogicalCircuitId>452e984d-1356-4da8-93f7-4f23a99b5a87</lc:LogicalCircuitId>
 		<lc:X>45</lc:X>
 		<lc:Y>40</lc:Y>
-	</lc:CircuitSymbol>
-	<lc:CircuitSymbol>
-		<lc:CircuitSymbolId>b00929a1-e620-4dc3-b0e9-cff6fa2f2abc</lc:CircuitSymbolId>
-		<lc:CircuitId>00000000-0000-0000-0000-000000010000</lc:CircuitId>
-		<lc:LogicalCircuitId>452e984d-1356-4da8-93f7-4f23a99b5a87</lc:LogicalCircuitId>
-		<lc:X>10</lc:X>
-		<lc:Y>35</lc:Y>
 	</lc:CircuitSymbol>
 	<lc:CircuitSymbol>
 		<lc:CircuitSymbolId>ab7b35d6-d48c-405b-8a87-fba965a454cd</lc:CircuitSymbolId>
@@ -9289,14 +9328,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</lc
 		<lc:Rotation>Right</lc:Rotation>
 	</lc:CircuitSymbol>
 	<lc:CircuitSymbol>
-		<lc:CircuitSymbolId>7bee07ec-f040-4893-8cef-ad21c51d04df</lc:CircuitSymbolId>
-		<lc:CircuitId>92db659d-8893-4685-96f3-ec5ab6ae9e78</lc:CircuitId>
-		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
-		<lc:X>37</lc:X>
-		<lc:Y>6</lc:Y>
-		<lc:Rotation>Right</lc:Rotation>
-	</lc:CircuitSymbol>
-	<lc:CircuitSymbol>
 		<lc:CircuitSymbolId>3d731a7b-6641-4330-b6d9-57eeae33391a</lc:CircuitSymbolId>
 		<lc:CircuitId>c3ccaeaa-4e77-4916-9fe5-4cb27e965d54</lc:CircuitId>
 		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
@@ -9523,6 +9554,212 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</lc
 		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
 		<lc:X>59</lc:X>
 		<lc:Y>30</lc:Y>
+		<lc:Rotation>Right</lc:Rotation>
+	</lc:CircuitSymbol>
+	<lc:CircuitSymbol>
+		<lc:CircuitSymbolId>d9fba265-b8d1-433f-813c-19f36e66d90d</lc:CircuitSymbolId>
+		<lc:CircuitId>0421c843-bf98-40cd-876f-9c1fd129da48</lc:CircuitId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X>37</lc:X>
+		<lc:Y>6</lc:Y>
+		<lc:Rotation>Right</lc:Rotation>
+	</lc:CircuitSymbol>
+	<lc:CircuitSymbol>
+		<lc:CircuitSymbolId>9353c44c-3048-4934-ac69-01e94722f174</lc:CircuitSymbolId>
+		<lc:CircuitId>3234a589-82cf-4458-85cb-088f487ddb98</lc:CircuitId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X>22</lc:X>
+		<lc:Y>41</lc:Y>
+	</lc:CircuitSymbol>
+	<lc:CircuitSymbol>
+		<lc:CircuitSymbolId>678599fe-5737-4070-ad5c-7dab101e49c5</lc:CircuitSymbolId>
+		<lc:CircuitId>fe5f9c29-0c6b-4758-a12d-4666e7bea687</lc:CircuitId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X>19</lc:X>
+		<lc:Y>34</lc:Y>
+		<lc:Rotation>Down</lc:Rotation>
+	</lc:CircuitSymbol>
+	<lc:CircuitSymbol>
+		<lc:CircuitSymbolId>0758edf3-0032-4f9a-b4a2-3dc84efec0cf</lc:CircuitSymbolId>
+		<lc:CircuitId>df56f6e5-4f9b-487e-8b76-3083d65739de</lc:CircuitId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X>13</lc:X>
+		<lc:Y>34</lc:Y>
+	</lc:CircuitSymbol>
+	<lc:CircuitSymbol>
+		<lc:CircuitSymbolId>dec6bfde-a727-47e5-bfb1-b98c1944c697</lc:CircuitSymbolId>
+		<lc:CircuitId>00000000-0000-0000-0000-000000020101</lc:CircuitId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X>8</lc:X>
+		<lc:Y>25</lc:Y>
+		<lc:Rotation>Right</lc:Rotation>
+	</lc:CircuitSymbol>
+	<lc:CircuitSymbol>
+		<lc:CircuitSymbolId>0fbbbf95-84c9-483c-8d4d-a512af711eca</lc:CircuitSymbolId>
+		<lc:CircuitId>9147f643-23a0-401d-aa5f-bb7de7dc40f0</lc:CircuitId>
+		<lc:LogicalCircuitId>2edd9265-0932-47f2-bcb9-06ea578f309e</lc:LogicalCircuitId>
+		<lc:X>30</lc:X>
+		<lc:Y>37</lc:Y>
+		<lc:Rotation>Down</lc:Rotation>
+	</lc:CircuitSymbol>
+	<lc:CircuitSymbol>
+		<lc:CircuitSymbolId>2337e1bf-524b-4298-936a-a1aadf51c820</lc:CircuitSymbolId>
+		<lc:CircuitId>f07e6ac6-dd4c-4f01-99d1-dc86157206ec</lc:CircuitId>
+		<lc:LogicalCircuitId>2edd9265-0932-47f2-bcb9-06ea578f309e</lc:LogicalCircuitId>
+		<lc:X>26</lc:X>
+		<lc:Y>29</lc:Y>
+		<lc:Rotation>Right</lc:Rotation>
+	</lc:CircuitSymbol>
+	<lc:CircuitSymbol>
+		<lc:CircuitSymbolId>d77bdf43-1e00-47d1-8983-0b4ffa665d55</lc:CircuitSymbolId>
+		<lc:CircuitId>2128a57a-99a9-4687-8a96-7510ce7d8aa1</lc:CircuitId>
+		<lc:LogicalCircuitId>2edd9265-0932-47f2-bcb9-06ea578f309e</lc:LogicalCircuitId>
+		<lc:X>12</lc:X>
+		<lc:Y>44</lc:Y>
+	</lc:CircuitSymbol>
+	<lc:CircuitSymbol>
+		<lc:CircuitSymbolId>64b156b9-15d2-4030-b521-439407a793bb</lc:CircuitSymbolId>
+		<lc:CircuitId>33359854-8350-4b29-9d6f-1ad9d5aea690</lc:CircuitId>
+		<lc:LogicalCircuitId>2edd9265-0932-47f2-bcb9-06ea578f309e</lc:LogicalCircuitId>
+		<lc:X>30</lc:X>
+		<lc:Y>35</lc:Y>
+		<lc:Rotation>Down</lc:Rotation>
+	</lc:CircuitSymbol>
+	<lc:CircuitSymbol>
+		<lc:CircuitSymbolId>a0b70576-91b3-466f-953a-3ebcefcba2a2</lc:CircuitSymbolId>
+		<lc:CircuitId>fa825e3a-4d7e-48c4-97f4-5f212afd0df1</lc:CircuitId>
+		<lc:LogicalCircuitId>2edd9265-0932-47f2-bcb9-06ea578f309e</lc:LogicalCircuitId>
+		<lc:X>10</lc:X>
+		<lc:Y>37</lc:Y>
+	</lc:CircuitSymbol>
+	<lc:CircuitSymbol>
+		<lc:CircuitSymbolId>c7df77cb-077c-4dac-8ec8-f25d687ab1bc</lc:CircuitSymbolId>
+		<lc:CircuitId>0a3fdf7a-aaad-444f-b02c-f4938541bc34</lc:CircuitId>
+		<lc:LogicalCircuitId>2edd9265-0932-47f2-bcb9-06ea578f309e</lc:LogicalCircuitId>
+		<lc:X>8</lc:X>
+		<lc:Y>26</lc:Y>
+	</lc:CircuitSymbol>
+	<lc:CircuitSymbol>
+		<lc:CircuitSymbolId>6318ff17-35a6-44cf-a662-6efe848ff823</lc:CircuitSymbolId>
+		<lc:CircuitId>df56f6e5-4f9b-487e-8b76-3083d65739de</lc:CircuitId>
+		<lc:LogicalCircuitId>2edd9265-0932-47f2-bcb9-06ea578f309e</lc:LogicalCircuitId>
+		<lc:X>19</lc:X>
+		<lc:Y>35</lc:Y>
+	</lc:CircuitSymbol>
+	<lc:CircuitSymbol>
+		<lc:CircuitSymbolId>b00929a1-e620-4dc3-b0e9-cff6fa2f2abc</lc:CircuitSymbolId>
+		<lc:CircuitId>00000000-0000-0000-0000-000000010000</lc:CircuitId>
+		<lc:LogicalCircuitId>2edd9265-0932-47f2-bcb9-06ea578f309e</lc:LogicalCircuitId>
+		<lc:X>10</lc:X>
+		<lc:Y>35</lc:Y>
+	</lc:CircuitSymbol>
+	<lc:CircuitSymbol>
+		<lc:CircuitSymbolId>34843975-a996-4840-98c6-24d076eeb4e5</lc:CircuitSymbolId>
+		<lc:CircuitId>d74cb4e0-2975-48eb-9a9a-16c8e529d4f6</lc:CircuitId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X>3</lc:X>
+		<lc:Y>15</lc:Y>
+	</lc:CircuitSymbol>
+	<lc:CircuitSymbol>
+		<lc:CircuitSymbolId>66a4e25a-7ea7-4595-8857-b288835f0df3</lc:CircuitSymbolId>
+		<lc:CircuitId>d4217d9b-28aa-49a4-8b48-d7d2b96ce1f8</lc:CircuitId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X>13</lc:X>
+		<lc:Y>27</lc:Y>
+		<lc:Rotation>Right</lc:Rotation>
+	</lc:CircuitSymbol>
+	<lc:CircuitSymbol>
+		<lc:CircuitSymbolId>cd0d67dd-3048-4ddf-bf15-9085c3798bc6</lc:CircuitSymbolId>
+		<lc:CircuitId>2d83b8b2-66d3-4b70-b25c-1ebdb4f8c525</lc:CircuitId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X>9</lc:X>
+		<lc:Y>46</lc:Y>
+		<lc:Rotation>Right</lc:Rotation>
+	</lc:CircuitSymbol>
+	<lc:CircuitSymbol>
+		<lc:CircuitSymbolId>6a066cfb-fba7-43a4-92cc-9338257b95e1</lc:CircuitSymbolId>
+		<lc:CircuitId>c84adb0e-6d90-4872-b1c5-1b952d8f8ee3</lc:CircuitId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X>13</lc:X>
+		<lc:Y>43</lc:Y>
+		<lc:Rotation>Right</lc:Rotation>
+	</lc:CircuitSymbol>
+	<lc:CircuitSymbol>
+		<lc:CircuitSymbolId>ad70b579-25cd-4379-89ad-b2ff91c8ddf8</lc:CircuitSymbolId>
+		<lc:CircuitId>83200899-2e0e-4971-b3e6-40414f317a5d</lc:CircuitId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X>13</lc:X>
+		<lc:Y>39</lc:Y>
+		<lc:Rotation>Right</lc:Rotation>
+	</lc:CircuitSymbol>
+	<lc:CircuitSymbol>
+		<lc:CircuitSymbolId>df7f2387-6759-4e15-a3dd-2c1a418ab2c7</lc:CircuitSymbolId>
+		<lc:CircuitId>ebd6ec0f-2c13-4e4e-9553-fdb95dc76298</lc:CircuitId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X>3</lc:X>
+		<lc:Y>41</lc:Y>
+	</lc:CircuitSymbol>
+	<lc:CircuitSymbol>
+		<lc:CircuitSymbolId>76a8c784-b656-41eb-ac50-4bed28d421a4</lc:CircuitSymbolId>
+		<lc:CircuitId>2c182835-1448-441d-bbb3-867de6675adb</lc:CircuitId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X>13</lc:X>
+		<lc:Y>48</lc:Y>
+		<lc:Rotation>Right</lc:Rotation>
+	</lc:CircuitSymbol>
+	<lc:CircuitSymbol>
+		<lc:CircuitSymbolId>0825cbef-5a4e-4638-a654-7111482b6b70</lc:CircuitSymbolId>
+		<lc:CircuitId>aae37bda-1930-4dba-be3d-c1c052e04493</lc:CircuitId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X>3</lc:X>
+		<lc:Y>47</lc:Y>
+	</lc:CircuitSymbol>
+	<lc:CircuitSymbol>
+		<lc:CircuitSymbolId>85753c44-4a69-4ca8-a43c-133ae8b3b2f1</lc:CircuitSymbolId>
+		<lc:CircuitId>8187ae95-61e0-4b67-91ed-148442ed4268</lc:CircuitId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X>5</lc:X>
+		<lc:Y>48</lc:Y>
+		<lc:Rotation>Right</lc:Rotation>
+	</lc:CircuitSymbol>
+	<lc:CircuitSymbol>
+		<lc:CircuitSymbolId>8c8687f6-6ea6-4334-a48b-6586ae012b1e</lc:CircuitSymbolId>
+		<lc:CircuitId>a6a5bf5a-49db-4dc7-8e23-7544e281fdc6</lc:CircuitId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X>40</lc:X>
+		<lc:Y>12</lc:Y>
+		<lc:Rotation>Right</lc:Rotation>
+	</lc:CircuitSymbol>
+	<lc:CircuitSymbol>
+		<lc:CircuitSymbolId>72287380-c7c3-4856-b6e9-b96a9367d716</lc:CircuitSymbolId>
+		<lc:CircuitId>cd391870-c45b-4aab-bd98-4249a86abff9</lc:CircuitId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X>21</lc:X>
+		<lc:Y>22</lc:Y>
+		<lc:Rotation>Right</lc:Rotation>
+	</lc:CircuitSymbol>
+	<lc:CircuitSymbol>
+		<lc:CircuitSymbolId>b55f4eac-34e1-43b3-8ed3-aa5b002aa80d</lc:CircuitSymbolId>
+		<lc:CircuitId>56bb250e-ce98-47c0-ad48-d31a0daf7f89</lc:CircuitId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X>39</lc:X>
+		<lc:Y>22</lc:Y>
+		<lc:Rotation>Right</lc:Rotation>
+	</lc:CircuitSymbol>
+	<lc:CircuitSymbol>
+		<lc:CircuitSymbolId>f59d98f2-9aac-4b2f-a20c-0403c9d4703e</lc:CircuitSymbolId>
+		<lc:CircuitId>1b2434c1-8977-4bad-8c7a-7331332379de</lc:CircuitId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X>37</lc:X>
+		<lc:Y>12</lc:Y>
+		<lc:Rotation>Right</lc:Rotation>
+	</lc:CircuitSymbol>
+	<lc:CircuitSymbol>
+		<lc:CircuitSymbolId>b531b5fb-552f-4655-adda-a939439891a3</lc:CircuitSymbolId>
+		<lc:CircuitId>6654e6ee-fa4d-49ad-9829-f87b030580f7</lc:CircuitId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X>36</lc:X>
+		<lc:Y>22</lc:Y>
 		<lc:Rotation>Right</lc:Rotation>
 	</lc:CircuitSymbol>
 	<lc:Wire>
@@ -24190,94 +24427,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</lc
 		<lc:Y2>12</lc:Y2>
 	</lc:Wire>
 	<lc:Wire>
-		<lc:WireId>363b96a5-34ca-40b4-98da-b8bd2dca9852</lc:WireId>
-		<lc:LogicalCircuitId>452e984d-1356-4da8-93f7-4f23a99b5a87</lc:LogicalCircuitId>
-		<lc:X1>20</lc:X1>
-		<lc:Y1>39</lc:Y1>
-		<lc:X2>20</lc:X2>
-		<lc:Y2>44</lc:Y2>
-	</lc:Wire>
-	<lc:Wire>
-		<lc:WireId>8743a091-602c-497e-9d20-13a8b580ae70</lc:WireId>
-		<lc:LogicalCircuitId>452e984d-1356-4da8-93f7-4f23a99b5a87</lc:LogicalCircuitId>
-		<lc:X1>30</lc:X1>
-		<lc:Y1>38</lc:Y1>
-		<lc:X2>22</lc:X2>
-		<lc:Y2>38</lc:Y2>
-	</lc:Wire>
-	<lc:Wire>
-		<lc:WireId>13489899-eeef-4886-931a-f3666d497982</lc:WireId>
-		<lc:LogicalCircuitId>452e984d-1356-4da8-93f7-4f23a99b5a87</lc:LogicalCircuitId>
-		<lc:X1>30</lc:X1>
-		<lc:Y1>36</lc:Y1>
-		<lc:X2>22</lc:X2>
-		<lc:Y2>36</lc:Y2>
-	</lc:Wire>
-	<lc:Wire>
-		<lc:WireId>80dd3dab-1e56-4428-bb98-ceee4be0f9f7</lc:WireId>
-		<lc:LogicalCircuitId>452e984d-1356-4da8-93f7-4f23a99b5a87</lc:LogicalCircuitId>
-		<lc:X1>19</lc:X1>
-		<lc:Y1>36</lc:Y1>
-		<lc:X2>12</lc:X2>
-		<lc:Y2>36</lc:Y2>
-	</lc:Wire>
-	<lc:Wire>
-		<lc:WireId>f0617f72-19cd-446f-a2ef-815cc7ca6206</lc:WireId>
-		<lc:LogicalCircuitId>452e984d-1356-4da8-93f7-4f23a99b5a87</lc:LogicalCircuitId>
-		<lc:X1>19</lc:X1>
-		<lc:Y1>38</lc:Y1>
-		<lc:X2>12</lc:X2>
-		<lc:Y2>38</lc:Y2>
-	</lc:Wire>
-	<lc:Wire>
-		<lc:WireId>cea2a7bb-0efe-4f17-9808-9dd23a9bbe0f</lc:WireId>
-		<lc:LogicalCircuitId>452e984d-1356-4da8-93f7-4f23a99b5a87</lc:LogicalCircuitId>
-		<lc:X1>16</lc:X1>
-		<lc:Y1>28</lc:Y1>
-		<lc:X2>16</lc:X2>
-		<lc:Y2>33</lc:Y2>
-	</lc:Wire>
-	<lc:Wire>
-		<lc:WireId>ea8f98fc-1550-4721-88d0-a95603542876</lc:WireId>
-		<lc:LogicalCircuitId>452e984d-1356-4da8-93f7-4f23a99b5a87</lc:LogicalCircuitId>
-		<lc:X1>16</lc:X1>
-		<lc:Y1>33</lc:Y1>
-		<lc:X2>20</lc:X2>
-		<lc:Y2>33</lc:Y2>
-	</lc:Wire>
-	<lc:Wire>
-		<lc:WireId>4ad3714a-82b3-43d8-9824-fde0b9d791ef</lc:WireId>
-		<lc:LogicalCircuitId>452e984d-1356-4da8-93f7-4f23a99b5a87</lc:LogicalCircuitId>
-		<lc:X1>20</lc:X1>
-		<lc:Y1>33</lc:Y1>
-		<lc:X2>20</lc:X2>
-		<lc:Y2>35</lc:Y2>
-	</lc:Wire>
-	<lc:Wire>
-		<lc:WireId>bac12e5b-d9c9-40b8-ac23-33c482af8444</lc:WireId>
-		<lc:LogicalCircuitId>452e984d-1356-4da8-93f7-4f23a99b5a87</lc:LogicalCircuitId>
-		<lc:X1>27</lc:X1>
-		<lc:Y1>31</lc:Y1>
-		<lc:X2>27</lc:X2>
-		<lc:Y2>34</lc:Y2>
-	</lc:Wire>
-	<lc:Wire>
-		<lc:WireId>b3270cf7-5e6c-4173-8ac3-b30050842f3b</lc:WireId>
-		<lc:LogicalCircuitId>452e984d-1356-4da8-93f7-4f23a99b5a87</lc:LogicalCircuitId>
-		<lc:X1>27</lc:X1>
-		<lc:Y1>34</lc:Y1>
-		<lc:X2>21</lc:X2>
-		<lc:Y2>34</lc:Y2>
-	</lc:Wire>
-	<lc:Wire>
-		<lc:WireId>595cc04a-35bb-43cd-b92d-5d6676039a3b</lc:WireId>
-		<lc:LogicalCircuitId>452e984d-1356-4da8-93f7-4f23a99b5a87</lc:LogicalCircuitId>
-		<lc:X1>21</lc:X1>
-		<lc:Y1>34</lc:Y1>
-		<lc:X2>21</lc:X2>
-		<lc:Y2>35</lc:Y2>
-	</lc:Wire>
-	<lc:Wire>
 		<lc:WireId>8e5aa564-b71b-4e4c-b9a4-76c315bfc7a7</lc:WireId>
 		<lc:LogicalCircuitId>efe1beb3-3371-4cfe-8fbd-bd65cd0fe290</lc:LogicalCircuitId>
 		<lc:X1>20</lc:X1>
@@ -33341,6 +33490,558 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</lc
 		<lc:X2>72</lc:X2>
 		<lc:Y2>30</lc:Y2>
 	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>931c7046-13d2-4b6a-8aa6-633e062bbc4b</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>15</lc:X1>
+		<lc:Y1>34</lc:Y1>
+		<lc:X2>15</lc:X2>
+		<lc:Y2>33</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>c9dd6456-b72e-40d8-8379-8facda166ad5</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>18</lc:X1>
+		<lc:Y1>35</lc:Y1>
+		<lc:X2>19</lc:X2>
+		<lc:Y2>35</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>bfa57b1a-ca28-4fa4-a394-22780f1d800c</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>13</lc:X1>
+		<lc:Y1>37</lc:Y1>
+		<lc:X2>12</lc:X2>
+		<lc:Y2>37</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>b08c9d76-ab06-41fe-85f8-e52462c40ffd</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>16</lc:X1>
+		<lc:Y1>37</lc:Y1>
+		<lc:X2>18</lc:X2>
+		<lc:Y2>37</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>9ea63b8d-17ee-4d4d-b893-574f410b0f6e</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>18</lc:X1>
+		<lc:Y1>37</lc:Y1>
+		<lc:X2>18</lc:X2>
+		<lc:Y2>35</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>022b92fc-19db-4404-8d53-2429a08da46e</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>15</lc:X1>
+		<lc:Y1>33</lc:Y1>
+		<lc:X2>18</lc:X2>
+		<lc:Y2>33</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>68244e63-d5ce-4a00-b6b1-4bdc4d142f74</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>13</lc:X1>
+		<lc:Y1>35</lc:Y1>
+		<lc:X2>9</lc:X2>
+		<lc:Y2>35</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>545295e3-a6eb-4574-a133-4e8e56c08522</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>9</lc:X1>
+		<lc:Y1>29</lc:Y1>
+		<lc:X2>9</lc:X2>
+		<lc:Y2>35</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>3ea10d6b-2216-44b8-a76a-63d0c173aae0</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>18</lc:X1>
+		<lc:Y1>33</lc:Y1>
+		<lc:X2>18</lc:X2>
+		<lc:Y2>35</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>21ddbeb2-0f67-46b4-951c-410f650d3bcb</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>16</lc:X1>
+		<lc:Y1>35</lc:Y1>
+		<lc:X2>18</lc:X2>
+		<lc:Y2>35</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>cea2a7bb-0efe-4f17-9808-9dd23a9bbe0f</lc:WireId>
+		<lc:LogicalCircuitId>2edd9265-0932-47f2-bcb9-06ea578f309e</lc:LogicalCircuitId>
+		<lc:X1>16</lc:X1>
+		<lc:Y1>28</lc:Y1>
+		<lc:X2>16</lc:X2>
+		<lc:Y2>33</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>8743a091-602c-497e-9d20-13a8b580ae70</lc:WireId>
+		<lc:LogicalCircuitId>2edd9265-0932-47f2-bcb9-06ea578f309e</lc:LogicalCircuitId>
+		<lc:X1>30</lc:X1>
+		<lc:Y1>38</lc:Y1>
+		<lc:X2>22</lc:X2>
+		<lc:Y2>38</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>13489899-eeef-4886-931a-f3666d497982</lc:WireId>
+		<lc:LogicalCircuitId>2edd9265-0932-47f2-bcb9-06ea578f309e</lc:LogicalCircuitId>
+		<lc:X1>30</lc:X1>
+		<lc:Y1>36</lc:Y1>
+		<lc:X2>22</lc:X2>
+		<lc:Y2>36</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>595cc04a-35bb-43cd-b92d-5d6676039a3b</lc:WireId>
+		<lc:LogicalCircuitId>2edd9265-0932-47f2-bcb9-06ea578f309e</lc:LogicalCircuitId>
+		<lc:X1>21</lc:X1>
+		<lc:Y1>34</lc:Y1>
+		<lc:X2>21</lc:X2>
+		<lc:Y2>35</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>4ad3714a-82b3-43d8-9824-fde0b9d791ef</lc:WireId>
+		<lc:LogicalCircuitId>2edd9265-0932-47f2-bcb9-06ea578f309e</lc:LogicalCircuitId>
+		<lc:X1>20</lc:X1>
+		<lc:Y1>33</lc:Y1>
+		<lc:X2>20</lc:X2>
+		<lc:Y2>35</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>bac12e5b-d9c9-40b8-ac23-33c482af8444</lc:WireId>
+		<lc:LogicalCircuitId>2edd9265-0932-47f2-bcb9-06ea578f309e</lc:LogicalCircuitId>
+		<lc:X1>27</lc:X1>
+		<lc:Y1>31</lc:Y1>
+		<lc:X2>27</lc:X2>
+		<lc:Y2>34</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>f0617f72-19cd-446f-a2ef-815cc7ca6206</lc:WireId>
+		<lc:LogicalCircuitId>2edd9265-0932-47f2-bcb9-06ea578f309e</lc:LogicalCircuitId>
+		<lc:X1>19</lc:X1>
+		<lc:Y1>38</lc:Y1>
+		<lc:X2>12</lc:X2>
+		<lc:Y2>38</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>80dd3dab-1e56-4428-bb98-ceee4be0f9f7</lc:WireId>
+		<lc:LogicalCircuitId>2edd9265-0932-47f2-bcb9-06ea578f309e</lc:LogicalCircuitId>
+		<lc:X1>19</lc:X1>
+		<lc:Y1>36</lc:Y1>
+		<lc:X2>12</lc:X2>
+		<lc:Y2>36</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>ea8f98fc-1550-4721-88d0-a95603542876</lc:WireId>
+		<lc:LogicalCircuitId>2edd9265-0932-47f2-bcb9-06ea578f309e</lc:LogicalCircuitId>
+		<lc:X1>16</lc:X1>
+		<lc:Y1>33</lc:Y1>
+		<lc:X2>20</lc:X2>
+		<lc:Y2>33</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>363b96a5-34ca-40b4-98da-b8bd2dca9852</lc:WireId>
+		<lc:LogicalCircuitId>2edd9265-0932-47f2-bcb9-06ea578f309e</lc:LogicalCircuitId>
+		<lc:X1>20</lc:X1>
+		<lc:Y1>39</lc:Y1>
+		<lc:X2>20</lc:X2>
+		<lc:Y2>44</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>b3270cf7-5e6c-4173-8ac3-b30050842f3b</lc:WireId>
+		<lc:LogicalCircuitId>2edd9265-0932-47f2-bcb9-06ea578f309e</lc:LogicalCircuitId>
+		<lc:X1>27</lc:X1>
+		<lc:Y1>34</lc:Y1>
+		<lc:X2>21</lc:X2>
+		<lc:Y2>34</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>d140e414-a225-44fe-92ea-c82490911586</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>12</lc:X1>
+		<lc:Y1>37</lc:Y1>
+		<lc:X2>11</lc:X2>
+		<lc:Y2>37</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>edcb7bf9-12f1-42b9-afea-e8dfe02411fd</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>9</lc:X1>
+		<lc:Y1>26</lc:Y1>
+		<lc:X2>9</lc:X2>
+		<lc:Y2>16</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>aaefb742-a6b4-47c2-bcfc-8ec8a8628fae</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>9</lc:X1>
+		<lc:Y1>16</lc:Y1>
+		<lc:X2>5</lc:X2>
+		<lc:Y2>16</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>0f7547f5-3a6a-4013-b79d-f6a2d23775d3</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>11</lc:X1>
+		<lc:Y1>37</lc:Y1>
+		<lc:X2>11</lc:X2>
+		<lc:Y2>31</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>29ce6f36-cdb6-48ec-8f04-7a65357c3dc3</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>11</lc:X1>
+		<lc:Y1>31</lc:Y1>
+		<lc:X2>23</lc:X2>
+		<lc:Y2>31</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>b08ea6af-ecb1-452e-ab03-d27d7c51a680</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>23</lc:X1>
+		<lc:Y1>13</lc:Y1>
+		<lc:X2>23</lc:X2>
+		<lc:Y2>31</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>0ab792a4-71ab-485f-aa27-9bfdbdead9a9</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>14</lc:X1>
+		<lc:Y1>29</lc:Y1>
+		<lc:X2>14</lc:X2>
+		<lc:Y2>34</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>9d75a2b7-816a-482e-978b-9acce0c7cba6</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>38</lc:X1>
+		<lc:Y1>7</lc:Y1>
+		<lc:X2>38</lc:X2>
+		<lc:Y2>2</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>82dad0f6-a38d-498c-b014-0daad368b396</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>38</lc:X1>
+		<lc:Y1>2</lc:Y1>
+		<lc:X2>19</lc:X2>
+		<lc:Y2>2</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>3b7c32dd-ca05-472e-9ef8-56973b569790</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>19</lc:X1>
+		<lc:Y1>2</lc:Y1>
+		<lc:X2>19</lc:X2>
+		<lc:Y2>26</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>0fa8bdc2-8a1e-4b3f-b2e1-b438757942bf</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>19</lc:X1>
+		<lc:Y1>26</lc:Y1>
+		<lc:X2>27</lc:X2>
+		<lc:Y2>26</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>50190e33-b994-4bea-a948-0d425e72a81e</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>27</lc:X1>
+		<lc:Y1>26</lc:Y1>
+		<lc:X2>27</lc:X2>
+		<lc:Y2>58</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>96e04224-e2df-4ec7-856c-9c9d9e1dd761</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>10</lc:X1>
+		<lc:Y1>55</lc:Y1>
+		<lc:X2>10</lc:X2>
+		<lc:Y2>58</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>b89290b9-6c49-42ca-b398-54e316589439</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>10</lc:X1>
+		<lc:Y1>58</lc:Y1>
+		<lc:X2>27</lc:X2>
+		<lc:Y2>58</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>f7763f1a-97d5-468d-93a4-64396ef091ea</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>14</lc:X1>
+		<lc:Y1>40</lc:Y1>
+		<lc:X2>14</lc:X2>
+		<lc:Y2>38</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>79473f81-f2a2-4d45-9748-8078843edbb7</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>14</lc:X1>
+		<lc:Y1>41</lc:Y1>
+		<lc:X2>14</lc:X2>
+		<lc:Y2>42</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>d9a081af-2159-4f10-8cde-c844108254f0</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>22</lc:X1>
+		<lc:Y1>42</lc:Y1>
+		<lc:X2>14</lc:X2>
+		<lc:Y2>42</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>a9534640-e601-4284-a314-4f86867f3104</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>14</lc:X1>
+		<lc:Y1>42</lc:Y1>
+		<lc:X2>14</lc:X2>
+		<lc:Y2>44</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>7333ec77-25f1-4db1-b0d4-52b15295103b</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>13</lc:X1>
+		<lc:Y1>44</lc:Y1>
+		<lc:X2>13</lc:X2>
+		<lc:Y2>42</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>dc0410cf-c222-48d9-be31-240d3dca4ec3</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>13</lc:X1>
+		<lc:Y1>42</lc:Y1>
+		<lc:X2>5</lc:X2>
+		<lc:Y2>42</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>22290390-edea-4d7b-81a7-1ddace6c3808</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>17</lc:X1>
+		<lc:Y1>53</lc:Y1>
+		<lc:X2>17</lc:X2>
+		<lc:Y2>54</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>97a03bc1-d7af-4598-a764-3d20f74c0d79</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>15</lc:X1>
+		<lc:Y1>53</lc:Y1>
+		<lc:X2>15</lc:X2>
+		<lc:Y2>54</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>d01a8095-239f-4479-ba3f-0ee59c84d653</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>14</lc:X1>
+		<lc:Y1>53</lc:Y1>
+		<lc:X2>14</lc:X2>
+		<lc:Y2>54</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>28348c16-944e-40dc-862f-a6968dfaaa09</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>13</lc:X1>
+		<lc:Y1>53</lc:Y1>
+		<lc:X2>13</lc:X2>
+		<lc:Y2>54</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>9e43d0e1-84e3-40a0-bb06-08bb7f9aa453</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>12</lc:X1>
+		<lc:Y1>53</lc:Y1>
+		<lc:X2>12</lc:X2>
+		<lc:Y2>54</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>3babceca-484e-43e0-8206-fa8cf3e987a4</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>11</lc:X1>
+		<lc:Y1>53</lc:Y1>
+		<lc:X2>11</lc:X2>
+		<lc:Y2>54</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>2757e896-35fd-43e6-b78a-c39a2237e1be</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>14</lc:X1>
+		<lc:Y1>45</lc:Y1>
+		<lc:X2>14</lc:X2>
+		<lc:Y2>52</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>53577eea-4a27-4c12-982d-1e7823d5fe22</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>16</lc:X1>
+		<lc:Y1>53</lc:Y1>
+		<lc:X2>16</lc:X2>
+		<lc:Y2>54</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>27a212be-79ef-43e7-ba0e-c6a9187820bb</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>10</lc:X1>
+		<lc:Y1>53</lc:Y1>
+		<lc:X2>10</lc:X2>
+		<lc:Y2>54</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>3ae64c5d-6f8d-43a3-8d26-458334cc73a8</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>9</lc:X1>
+		<lc:Y1>53</lc:Y1>
+		<lc:X2>9</lc:X2>
+		<lc:Y2>54</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>d90b92b8-42ab-4ee8-957b-51a5620006f3</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>8</lc:X1>
+		<lc:Y1>53</lc:Y1>
+		<lc:X2>8</lc:X2>
+		<lc:Y2>54</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>f99d87e6-2562-44bc-906a-1c8e0387247f</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>7</lc:X1>
+		<lc:Y1>53</lc:Y1>
+		<lc:X2>7</lc:X2>
+		<lc:Y2>54</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>d3ec25df-069d-4873-bcaf-20b3f68021bf</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>6</lc:X1>
+		<lc:Y1>53</lc:Y1>
+		<lc:X2>6</lc:X2>
+		<lc:Y2>54</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>617422a8-e242-4c1d-8058-87174b8c6f3c</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>5</lc:X1>
+		<lc:Y1>53</lc:Y1>
+		<lc:X2>5</lc:X2>
+		<lc:Y2>54</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>b8be8e8c-d456-4593-a3d8-f87cf6d0d893</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>4</lc:X1>
+		<lc:Y1>53</lc:Y1>
+		<lc:X2>4</lc:X2>
+		<lc:Y2>54</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>7e08d8dc-3cab-4119-98e9-65f5b45d1cb0</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>3</lc:X1>
+		<lc:Y1>53</lc:Y1>
+		<lc:X2>3</lc:X2>
+		<lc:Y2>54</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>2819aea8-0eb7-4b9f-8757-68ed340be1a7</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>2</lc:X1>
+		<lc:Y1>53</lc:Y1>
+		<lc:X2>2</lc:X2>
+		<lc:Y2>54</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>faa47cf3-1442-4d03-a8d4-3fa431cbca1d</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>6</lc:X1>
+		<lc:Y1>52</lc:Y1>
+		<lc:X2>6</lc:X2>
+		<lc:Y2>48</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>b9a57512-7f3b-445c-8ddf-f2078aa86956</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>6</lc:X1>
+		<lc:Y1>48</lc:Y1>
+		<lc:X2>5</lc:X2>
+		<lc:Y2>48</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>7ac15fe5-63ea-42ec-8b03-96068ab76ec5</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>22</lc:X1>
+		<lc:Y1>13</lc:Y1>
+		<lc:X2>22</lc:X2>
+		<lc:Y2>22</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>1b9bded9-364b-46fc-9f50-5825a97ca108</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>41</lc:X1>
+		<lc:Y1>13</lc:Y1>
+		<lc:X2>41</lc:X2>
+		<lc:Y2>14</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>e8b81602-6ab8-410b-b7fd-d0d9fb158357</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>40</lc:X1>
+		<lc:Y1>13</lc:Y1>
+		<lc:X2>40</lc:X2>
+		<lc:Y2>14</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>a15b746e-8d22-45d3-96bb-2c7450b29ffa</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>39</lc:X1>
+		<lc:Y1>13</lc:Y1>
+		<lc:X2>39</lc:X2>
+		<lc:Y2>14</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>d5f8f3f9-0c87-4c28-8ba4-c389855dc03c</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>40</lc:X1>
+		<lc:Y1>15</lc:Y1>
+		<lc:X2>40</lc:X2>
+		<lc:Y2>22</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>6cee9fa1-5d10-4382-890d-a93b19882190</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>37</lc:X1>
+		<lc:Y1>15</lc:Y1>
+		<lc:X2>37</lc:X2>
+		<lc:Y2>22</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>2e9d1a1f-39ce-4664-80e8-e5421c97d8c6</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>38</lc:X1>
+		<lc:Y1>13</lc:Y1>
+		<lc:X2>38</lc:X2>
+		<lc:Y2>14</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>2adf3ac1-2db8-446b-ad8e-28739fe2f474</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>37</lc:X1>
+		<lc:Y1>13</lc:Y1>
+		<lc:X2>37</lc:X2>
+		<lc:Y2>14</lc:Y2>
+	</lc:Wire>
+	<lc:Wire>
+		<lc:WireId>49f74a4a-6f41-46e6-8f15-02798127458a</lc:WireId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X1>36</lc:X1>
+		<lc:Y1>13</lc:Y1>
+		<lc:X2>36</lc:X2>
+		<lc:Y2>14</lc:Y2>
+	</lc:Wire>
 	<lc:TextNote>
 		<lc:TextNoteId>6128f003-bc07-4da8-8ad1-72c60ed8892c</lc:TextNoteId>
 		<lc:LogicalCircuitId>28f39582-e830-4d04-af52-6d60e20253b8</lc:LogicalCircuitId>
@@ -33493,5 +34194,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</lc
 		<lc:Width>11</lc:Width>
 		<lc:Height>1</lc:Height>
 		<lc:Note>&lt;FlowDocument TextAlignment="Left" PagePadding="5,0,5,0" AllowDrop="True" NumberSubstitution.CultureSource="User" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"&gt;&lt;Paragraph&gt;&lt;Run FontFamily="Cascadia Code" FontWeight="Bold" FontSize="18" xml:lang="zh-cn"&gt;Address from register.&lt;/Run&gt;&lt;/Paragraph&gt;&lt;/FlowDocument&gt;</lc:Note>
+	</lc:TextNote>
+	<lc:TextNote>
+		<lc:TextNoteId>85f6cfd6-3fcd-45bb-b7fd-9b313607da83</lc:TextNoteId>
+		<lc:LogicalCircuitId>995c58a1-0eb0-497d-a6d4-806009db53be</lc:LogicalCircuitId>
+		<lc:X>7</lc:X>
+		<lc:Y>48</lc:Y>
+		<lc:Width>13</lc:Width>
+		<lc:Height>3</lc:Height>
+		<lc:Note>&lt;FlowDocument TextAlignment="Left" PagePadding="5,0,5,0" AllowDrop="True" NumberSubstitution.CultureSource="User" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"&gt;&lt;Paragraph&gt;&lt;Run FontFamily="Cascadia Code" FontWeight="Bold" FontSize="18" xml:lang="zh-cn" xml:space="preserve"&gt;Address of an instruction. &lt;/Run&gt;&lt;/Paragraph&gt;&lt;Paragraph&gt;&lt;Run FontFamily="Cascadia Code" FontWeight="Bold" FontSize="18" xml:lang="zh-cn"&gt;(from IR)&lt;/Run&gt;&lt;/Paragraph&gt;&lt;/FlowDocument&gt;</lc:Note>
 	</lc:TextNote>
 </lc:CircuitProject>
