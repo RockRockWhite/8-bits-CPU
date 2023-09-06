@@ -17,3 +17,7 @@ PC MC and bus
 ALU
 
 ![image-20230901232840102](README.assets/image-20230901232840102.png)
+
+## 8 bits CPU
+
+![image-20230906215101512](README.assets/image-20230906215101512.png)
