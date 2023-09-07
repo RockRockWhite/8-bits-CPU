@@ -1,0 +1,61 @@
+%{
+    pub struct Foo {
+        x: i32,
+        y: i32,
+    }
+%}
+
+%%
+    {S : program} -> |datas| {
+        println!("S -> program");
+        "".to_string()
+    } ;;
+
+    {program : instructions} -> |datas| {
+        println!("program -> instructions");
+        "".to_string()
+    } ;;
+
+    {instructions : instruction instructions} -> |datas| {
+        println!("instructions -> instruction instructions");
+        "".to_string()
+    } ;;
+
+    {instructions : __EPSILON__} -> |datas| {
+        println!("instructions -> ε");
+        "".to_string()
+    } ;;
+    
+
+    {instruction : li register comma number} -> |datas| {
+        println!("instruction -> li register comma number");
+        "".to_string()
+    } ;;
+
+    {instruction : mv register comma register} -> |datas| {
+        println!("instruction -> li register comma register");
+        "".to_string()
+    } ;;
+
+    {instruction : lb register comma number} -> |datas| {
+        println!("instruction -> lb register comma number");
+        "".to_string()
+    } ;;
+
+    {instruction : sb register comma number} -> |datas| {
+        println!("instruction -> sb register comma number");
+        "".to_string()
+    } ;;
+
+    {instruction : nop} -> |datas| {
+        println!("instruction -> nop");
+        "".to_string()
+    } ;;
+
+    {instruction : hlt} -> |datas| {
+        println!("instruction -> hlt");
+        "".to_string()
+    } ;;
+%%
+    pub a: i32,
+    pub b: i64,

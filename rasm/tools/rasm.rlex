@@ -1,0 +1,77 @@
+%{
+    #[derive(Clone)]
+    pub struct LexToken {
+        symbol_type: String,
+        data: String,
+    }
+
+    impl LexToken {
+        pub fn build(symbol_type: String, data: String) -> Self {
+            Self { symbol_type, data }
+        }
+    }
+
+    impl crate::rasm_parser::Token for LexToken {
+        fn to_tree_node(&self) -> crate::rasm_parser::ParsingTreeNode {
+            crate::rasm_parser::ParsingTreeNode::build(
+                self.symbol_type.clone(),
+                self.data.clone(),
+                vec![],
+            )
+        }
+    }
+%}
+    Digits = [0-9]
+    HexDigits = [0-9]|[a-f]|[A-F]
+    Lowercase = [a-z]
+    Uppercase = [A-Z]
+    Letters = {Lowercase}|{Uppercase}
+    Asciis = [ -~]
+    DecNumber = ({Digits}{Digits}*)
+    HexNumber = (0x{HexDigits}{HexDigits}*)
+    WhiteSpace = ( |\n|\r|\f|\t|\v)*
+    String = "{Asciis}*"
+    Instruction = li|mv|lb|sb|nop|hlt
+    Register = r[0-8]
+    Comment = (;{Asciis}*\n)
+    Comma = ,
+%%
+    {Instruction} -> |s|{
+        self.tokens.borrow_mut().push(LexToken::build(s.into(), s.into()));
+    } ;;
+    {Register} -> |s|{
+        self.tokens.borrow_mut().push(LexToken::build("register".into(), s.into()));
+    } ;;
+    {Comment} -> |s|{
+    } ;;
+    {DecNumber} -> |s|{
+        match i8::from_str_radix(s.into(), 10) {
+            Ok(num) => {
+                self.tokens
+                    .borrow_mut()
+                    .push(LexToken::build("number".into(), num.to_string()));
+            }
+            Err(e) => {
+                println!("invalid operator number: {}, error_msg: {}", s, e);
+            }
+        }
+    } ;;
+    {HexNumber} -> |s|{
+        match i8::from_str_radix(&s[2..], 16) {
+            Ok(num) => {
+                self.tokens
+                    .borrow_mut()
+                    .push(LexToken::build("number".into(), num.to_string()));
+            }
+            Err(e) => {
+                println!("invalid operator number: {}, error_msg: {}", s, e);
+            }
+        }
+    } ;;
+    {WhiteSpace} -> |s|{
+    } ;;
+    {Comma} -> |s|{
+        self.tokens.borrow_mut().push(LexToken::build("comma".into(), s.into()));
+    } ;;
+%%
+    pub tokens: std::cell::RefCell<Vec<LexToken>>,
