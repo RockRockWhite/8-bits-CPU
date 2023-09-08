@@ -49,7 +49,7 @@
             Ok(num) => {
                 self.tokens
                     .borrow_mut()
-                    .push(LexToken::build("number".into(), num.to_string()));
+                    .push(LexToken::build("number".into(), (num as u8).to_string()));
             }
             Err(e) => {
                 println!("invalid operator number: {}, error_msg: {}", s, e);
@@ -57,7 +57,7 @@
         }
     } ;;
     {HexNumber} -> |s|{
-        match i8::from_str_radix(&s[2..], 16) {
+        match u8::from_str_radix(&s[2..], 16) {
             Ok(num) => {
                 self.tokens
                     .borrow_mut()
