@@ -1,6 +1,5 @@
 import os
 import pin
-import assembly
 import instruction
 
 filename = os.path.join(os.path.dirname(__file__), "micro.bin")
@@ -17,9 +16,9 @@ for addr in range(0x10000):
 
     # fill the microcode with
     # the beginning of the fetch cycle
-    fetch_len = len(assembly.FETCH)
+    fetch_len = len(instruction.FETCH)
     if cyc < fetch_len:
-        micro[addr] = assembly.FETCH[cyc]
+        micro[addr] = instruction.FETCH[cyc]
 
     # fill instruction cycle if the instruction exists
     if ia in instruction.instructions:
