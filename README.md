@@ -21,3 +21,24 @@ ALU
 ## 8 bits CPU
 
 ![image-20230906215101512](README.assets/image-20230906215101512.png)
+
+## 指令系统
+> ./rasm 下实现了简单的汇编器
+
+> ./rasm/test_code.asm 为汇编示例代码
+
+```asm
+li r0, 0xff ; this is a comment
+mv r1, r0
+lb r2, 0x02
+sb r2, 0x20
+nop
+hlt
+```
+
+> ./rasm/test.bin 为生成的二进制文件
+
+本汇编器基于我自己写的 rlex 和 rparsr 实现  
+[RockRockWhite/RLex: lexical analyis by rust (github.com)](https://github.com/RockRockWhite/RLex)  
+[RockRockWhite/RParser: a parser tools by rust (github.com)](https://github.com/RockRockWhite/RParser)  
+
