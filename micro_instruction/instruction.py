@@ -16,6 +16,12 @@ XOR = 17
 XORI = 18
 NOT = 19
 
+CMP = 32
+BE = 33
+BNE = 34
+BGE = 35
+BLT = 36
+
 NOP = 62
 HLT = 63
 
@@ -130,6 +136,14 @@ instructions = {
         pin.SRC_S | pin.ALU_A_W,
         pin.ALU_OP_NOT | pin.ALU_C_W | pin.PSR_W,
         pin.ALU_C_R | pin.DST_S,
+        pin.CYC_RS,
+    ],
+    # cmp r0, r1
+    CMP: [
+        pin.SRC_S | pin.ALU_B_W,
+        pin.DST_R | pin.SRC_W,
+        pin.SRC_S | pin.ALU_A_W,
+        pin.ALU_OP_SUB | pin.ALU_C_W | pin.PSR_W,
         pin.CYC_RS,
     ],
     NOP: [pin.CYC_RS],
