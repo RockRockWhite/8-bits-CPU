@@ -4,163 +4,163 @@
 ## Base Info
 - config_file: ./conf/rasm.rparser
 - output_file: src/rasm_parser.rs
-- time: 2023-09-11 13:12:26.588596453 +08:00
+- time: 2023-09-11 13:42:29.209315507 +08:00
 
 ---
 
 ## DFA Graph
 ```mermaid
 graph LR
-0["instruction -> •add register comma register\ninstructions -> •instruction instructions\ninstruction -> •sub register comma register\ninstruction -> •sb register comma number\ninstruction -> •addi register comma number\ninstruction -> •and register comma register\ninstruction -> •hlt\ninstruction -> •andi register comma number\ninstruction -> •li register comma number\ninstruction -> •or register comma register\ninstruction -> •cmp register comma register\ninstructions -> •\ninstruction -> •nop\ninstruction -> •mv register comma register\ninstruction -> •xor register comma register\ninstruction -> •lb register comma number\nprogram -> •instructions\nS -> •program\ninstruction -> •not register\n__DUMMY_START__ -> •S\ninstruction -> •ori register comma number\ninstruction -> •xori register comma number\n"]
-1["instruction -> •or register comma register\ninstruction -> •add register comma register\ninstructions -> •\ninstruction -> •xor register comma register\ninstruction -> •not register\ninstruction -> •cmp register comma register\ninstruction -> •andi register comma number\ninstruction -> •addi register comma number\ninstruction -> •li register comma number\ninstruction -> •sub register comma register\ninstructions -> •instruction instructions\ninstruction -> •mv register comma register\ninstruction -> •xori register comma number\ninstruction -> •ori register comma number\ninstruction -> •lb register comma number\ninstruction -> •and register comma register\ninstruction -> •hlt\ninstruction -> •sb register comma number\ninstructions -> instruction •instructions\ninstruction -> •nop\n"]
-2["instruction -> add •register comma register\n"]
-3["instruction -> add register •comma register\n"]
-4["instruction -> add register comma •register\n"]
-5["instruction -> add register comma register•\n"]
-6["instruction -> mv •register comma register\n"]
-7["instruction -> mv register •comma register\n"]
-8["instruction -> mv register comma •register\n"]
-9["instruction -> mv register comma register•\n"]
-10["instruction -> lb •register comma number\n"]
-11["instruction -> lb register •comma number\n"]
-12["instruction -> lb register comma •number\n"]
-13["instruction -> lb register comma number•\n"]
-14["instruction -> addi •register comma number\n"]
-15["instruction -> addi register •comma number\n"]
-16["instruction -> addi register comma •number\n"]
-17["instruction -> addi register comma number•\n"]
-18["instruction -> xor •register comma register\n"]
-19["instruction -> xor register •comma register\n"]
-20["instruction -> xor register comma •register\n"]
-21["instruction -> xor register comma register•\n"]
-22["instruction -> sb •register comma number\n"]
-23["instruction -> sb register •comma number\n"]
-24["instruction -> sb register comma •number\n"]
-25["instruction -> sb register comma number•\n"]
-26["instruction -> andi •register comma number\n"]
-27["instruction -> andi register •comma number\n"]
-28["instruction -> andi register comma •number\n"]
-29["instruction -> andi register comma number•\n"]
-30["instruction -> hlt•\n"]
-31["instruction -> sub •register comma register\n"]
-32["instruction -> sub register •comma register\n"]
-33["instruction -> sub register comma •register\n"]
-34["instruction -> sub register comma register•\n"]
-35["instructions -> instruction instructions•\n"]
-36["instruction -> or •register comma register\n"]
-37["instruction -> or register •comma register\n"]
-38["instruction -> or register comma •register\n"]
-39["instruction -> or register comma register•\n"]
-40["instruction -> nop•\n"]
-41["instruction -> and •register comma register\n"]
-42["instruction -> and register •comma register\n"]
-43["instruction -> and register comma •register\n"]
-44["instruction -> and register comma register•\n"]
-45["instruction -> not •register\n"]
-46["instruction -> not register•\n"]
-47["instruction -> cmp •register comma register\n"]
-48["instruction -> cmp register •comma register\n"]
-49["instruction -> cmp register comma •register\n"]
-50["instruction -> cmp register comma register•\n"]
-51["instruction -> ori •register comma number\n"]
-52["instruction -> ori register •comma number\n"]
-53["instruction -> ori register comma •number\n"]
-54["instruction -> ori register comma number•\n"]
-55["instruction -> xori •register comma number\n"]
-56["instruction -> xori register •comma number\n"]
-57["instruction -> xori register comma •number\n"]
-58["instruction -> xori register comma number•\n"]
-59["instruction -> li •register comma number\n"]
-60["instruction -> li register •comma number\n"]
-61["instruction -> li register comma •number\n"]
-62["instruction -> li register comma number•\n"]
-63["program -> instructions•\n"]
-64["S -> program•\n"]
+0["S -> •program\ninstruction -> •hlt\ninstruction -> •sub register comma register\n__DUMMY_START__ -> •S\ninstruction -> •xori register comma number\ninstruction -> •mv register comma register\ninstruction -> •lb register comma number\ninstruction -> •sb register comma number\nprogram -> •instructions\ninstruction -> •addi register comma number\ninstruction -> •add register comma register\ninstructions -> •\ninstruction -> •xor register comma register\ninstruction -> •ori register comma number\ninstructions -> •instruction instructions\ninstruction -> •and register comma register\ninstruction -> •or register comma register\ninstruction -> •andi register comma number\ninstruction -> •cmp register comma register\ninstruction -> •nop\ninstruction -> •li register comma number\ninstruction -> •not register\n"]
+1["instruction -> andi •register comma number\n"]
+2["instruction -> andi register •comma number\n"]
+3["instruction -> andi register comma •number\n"]
+4["instruction -> andi register comma number•\n"]
+5["instruction -> sub •register comma register\n"]
+6["instruction -> sub register •comma register\n"]
+7["instruction -> sub register comma •register\n"]
+8["instruction -> sub register comma register•\n"]
+9["instruction -> cmp •register comma register\n"]
+10["instruction -> cmp register •comma register\n"]
+11["instruction -> cmp register comma •register\n"]
+12["instruction -> cmp register comma register•\n"]
+13["instruction -> hlt•\n"]
+14["instruction -> or •register comma register\n"]
+15["instruction -> or register •comma register\n"]
+16["instruction -> or register comma •register\n"]
+17["instruction -> or register comma register•\n"]
+18["program -> instructions•\n"]
+19["instruction -> not •register\n"]
+20["instruction -> not register•\n"]
+21["instruction -> and •register comma register\n"]
+22["instruction -> and register •comma register\n"]
+23["instruction -> and register comma •register\n"]
+24["instruction -> and register comma register•\n"]
+25["instruction -> sb •register comma number\n"]
+26["instruction -> sb register •comma number\n"]
+27["instruction -> sb register comma •number\n"]
+28["instruction -> sb register comma number•\n"]
+29["instruction -> ori •register comma number\n"]
+30["instruction -> ori register •comma number\n"]
+31["instruction -> ori register comma •number\n"]
+32["instruction -> ori register comma number•\n"]
+33["S -> program•\n"]
+34["instruction -> xor •register comma register\n"]
+35["instruction -> xor register •comma register\n"]
+36["instruction -> xor register comma •register\n"]
+37["instruction -> xor register comma register•\n"]
+38["instruction -> nop•\n"]
+39["instruction -> li •register comma number\n"]
+40["instruction -> li register •comma number\n"]
+41["instruction -> li register comma •number\n"]
+42["instruction -> li register comma number•\n"]
+43["instruction -> add •register comma register\n"]
+44["instruction -> add register •comma register\n"]
+45["instruction -> add register comma •register\n"]
+46["instruction -> add register comma register•\n"]
+47["instruction -> xori •register comma number\n"]
+48["instruction -> xori register •comma number\n"]
+49["instruction -> xori register comma •number\n"]
+50["instruction -> xori register comma number•\n"]
+51["instruction -> •and register comma register\ninstructions -> instruction •instructions\ninstruction -> •hlt\ninstruction -> •add register comma register\ninstruction -> •not register\ninstruction -> •addi register comma number\ninstruction -> •xor register comma register\ninstruction -> •cmp register comma register\ninstruction -> •lb register comma number\ninstructions -> •instruction instructions\ninstruction -> •or register comma register\ninstruction -> •andi register comma number\ninstruction -> •xori register comma number\ninstruction -> •mv register comma register\ninstruction -> •sub register comma register\ninstruction -> •li register comma number\ninstructions -> •\ninstruction -> •sb register comma number\ninstruction -> •nop\ninstruction -> •ori register comma number\n"]
+52["instruction -> mv •register comma register\n"]
+53["instruction -> mv register •comma register\n"]
+54["instruction -> mv register comma •register\n"]
+55["instruction -> mv register comma register•\n"]
+56["instruction -> addi •register comma number\n"]
+57["instruction -> addi register •comma number\n"]
+58["instruction -> addi register comma •number\n"]
+59["instruction -> addi register comma number•\n"]
+60["instructions -> instruction instructions•\n"]
+61["instruction -> lb •register comma number\n"]
+62["instruction -> lb register •comma number\n"]
+63["instruction -> lb register comma •number\n"]
+64["instruction -> lb register comma number•\n"]
 65["__DUMMY_START__ -> S•\n"]
 
-4--"register"-->5
-3--"comma"-->4
-2--"register"-->3
-1--"add"-->2
-8--"register"-->9
-7--"comma"-->8
-6--"register"-->7
-1--"mv"-->6
-1--"instruction"-->1
-12--"number"-->13
-11--"comma"-->12
-10--"register"-->11
-1--"lb"-->10
-16--"number"-->17
+3--"number"-->4
+2--"comma"-->3
+1--"register"-->2
+0--"andi"-->1
+7--"register"-->8
+6--"comma"-->7
+5--"register"-->6
+0--"sub"-->5
+11--"register"-->12
+10--"comma"-->11
+9--"register"-->10
+0--"cmp"-->9
+0--"hlt"-->13
+16--"register"-->17
 15--"comma"-->16
 14--"register"-->15
-1--"addi"-->14
-20--"register"-->21
-19--"comma"-->20
-18--"register"-->19
-1--"xor"-->18
-24--"number"-->25
-23--"comma"-->24
-22--"register"-->23
-1--"sb"-->22
-28--"number"-->29
-27--"comma"-->28
-26--"register"-->27
-1--"andi"-->26
-1--"hlt"-->30
-33--"register"-->34
-32--"comma"-->33
-31--"register"-->32
-1--"sub"-->31
-1--"instructions"-->35
-38--"register"-->39
-37--"comma"-->38
+0--"or"-->14
+0--"instructions"-->18
+19--"register"-->20
+0--"not"-->19
+23--"register"-->24
+22--"comma"-->23
+21--"register"-->22
+0--"and"-->21
+27--"number"-->28
+26--"comma"-->27
+25--"register"-->26
+0--"sb"-->25
+31--"number"-->32
+30--"comma"-->31
+29--"register"-->30
+0--"ori"-->29
+0--"program"-->33
 36--"register"-->37
-1--"or"-->36
-1--"nop"-->40
-43--"register"-->44
-42--"comma"-->43
-41--"register"-->42
-1--"and"-->41
+35--"comma"-->36
+34--"register"-->35
+0--"xor"-->34
+0--"nop"-->38
+41--"number"-->42
+40--"comma"-->41
+39--"register"-->40
+0--"li"-->39
 45--"register"-->46
-1--"not"-->45
-49--"register"-->50
+44--"comma"-->45
+43--"register"-->44
+0--"add"-->43
+49--"number"-->50
 48--"comma"-->49
 47--"register"-->48
-1--"cmp"-->47
-53--"number"-->54
-52--"comma"-->53
-51--"register"-->52
-1--"ori"-->51
-57--"number"-->58
-56--"comma"-->57
-55--"register"-->56
-1--"xori"-->55
-61--"number"-->62
-60--"comma"-->61
-59--"register"-->60
-1--"li"-->59
-0--"instruction"-->1
-0--"hlt"-->30
-0--"andi"-->26
-0--"instructions"-->63
-0--"not"-->45
-0--"nop"-->40
-0--"addi"-->14
-0--"add"-->2
-0--"sb"-->22
-0--"or"-->36
-0--"and"-->41
-0--"sub"-->31
-0--"cmp"-->47
-0--"program"-->64
-0--"li"-->59
-0--"xor"-->18
-0--"lb"-->10
+0--"xori"-->47
+51--"hlt"-->13
+51--"instruction"-->51
+51--"andi"-->1
+51--"xor"-->34
+51--"xori"-->47
+51--"sb"-->25
+51--"li"-->39
+54--"register"-->55
+53--"comma"-->54
+52--"register"-->53
+51--"mv"-->52
+51--"add"-->43
+51--"not"-->19
+51--"or"-->14
+51--"cmp"-->9
+51--"sub"-->5
+51--"nop"-->38
+58--"number"-->59
+57--"comma"-->58
+56--"register"-->57
+51--"addi"-->56
+51--"instructions"-->60
+63--"number"-->64
+62--"comma"-->63
+61--"register"-->62
+51--"lb"-->61
+51--"and"-->21
+51--"ori"-->29
+0--"instruction"-->51
 0--"S"-->65
-0--"xori"-->55
-0--"mv"-->6
-0--"ori"-->51
+0--"addi"-->56
+0--"lb"-->61
+0--"mv"-->52
 
 ```
 
@@ -168,170 +168,168 @@ graph LR
 
 ## Follow Set
 ```txt
-__$__: []
 sub: ["register"]
-not: ["register"]
-sb: ["register"]
-register: ["and", "add", "comma", "sub", "not", "lb", "mv", "hlt", "nop", "addi", "andi", "li", "xori", "xor", "__$__", "sb", "ori", "or", "cmp"]
-li: ["register"]
-number: ["cmp", "not", "nop", "hlt", "sub", "li", "and", "andi", "xor", "mv", "xori", "sb", "or", "lb", "add", "__$__", "addi", "ori"]
-cmp: ["register"]
-hlt: ["__$__", "nop", "add", "xori", "hlt", "cmp", "li", "mv", "and", "not", "andi", "sb", "ori", "xor", "or", "lb", "sub", "addi"]
-nop: ["xor", "mv", "lb", "__$__", "cmp", "hlt", "ori", "andi", "add", "xori", "addi", "sb", "or", "li", "not", "sub", "and", "nop"]
-S: ["__$__"]
-program: ["__$__"]
-add: ["register"]
-ori: ["register"]
-xor: ["register"]
-__DUMMY_START__: ["__$__"]
 andi: ["register"]
-and: ["register"]
-or: ["register"]
-xori: ["register"]
+cmp: ["register"]
+__DUMMY_START__: ["__$__"]
+hlt: ["nop", "or", "ori", "and", "lb", "andi", "addi", "cmp", "hlt", "mv", "not", "li", "xori", "__$__", "sb", "add", "xor", "sub"]
 __EPSILON__: ["__$__"]
+xori: ["register"]
+S: ["__$__"]
+register: ["addi", "nop", "not", "ori", "cmp", "xori", "__$__", "add", "or", "hlt", "sub", "mv", "comma", "li", "and", "andi", "sb", "lb", "xor"]
+lb: ["register"]
+li: ["register"]
 mv: ["register"]
 instructions: ["__$__"]
-instruction: ["hlt", "cmp", "xor", "mv", "xori", "not", "nop", "sub", "addi", "ori", "sb", "or", "__$__", "li", "andi", "and", "lb", "add"]
-lb: ["register"]
+add: ["register"]
+not: ["register"]
+sb: ["register"]
+xor: ["register"]
 addi: ["register"]
-comma: ["number", "register"]
+nop: ["and", "hlt", "not", "sb", "sub", "lb", "andi", "cmp", "addi", "xor", "nop", "add", "or", "xori", "__$__", "ori", "li", "mv"]
+instruction: ["ori", "xor", "sub", "sb", "hlt", "li", "addi", "nop", "mv", "__$__", "cmp", "add", "and", "not", "or", "andi", "lb", "xori"]
+or: ["register"]
+number: ["xor", "hlt", "ori", "or", "add", "sub", "sb", "addi", "and", "not", "__$__", "mv", "nop", "cmp", "li", "andi", "lb", "xori"]
+ori: ["register"]
+comma: ["register", "number"]
+and: ["register"]
+program: ["__$__"]
+__$__: []
 ```
 
 ---
 ## Action Table
 ```txt
 State 0:
-add: Shift(2)
-li: Shift(59)
-addi: Shift(14)
-or: Shift(36)
+program: Shift(33)
+hlt: Shift(13)
+lb: Shift(61)
+andi: Shift(1)
+instructions: Shift(18)
+cmp: Shift(9)
 S: Shift(65)
-program: Shift(64)
-nop: Shift(40)
-xori: Shift(55)
-instructions: Shift(63)
-mv: Shift(6)
-not: Shift(45)
+xor: Shift(34)
+instruction: Shift(51)
+xori: Shift(47)
+sub: Shift(5)
+or: Shift(14)
+addi: Shift(56)
 __$__: Accept
-cmp: Shift(47)
-lb: Shift(10)
-instruction: Shift(1)
-sb: Shift(22)
-andi: Shift(26)
-hlt: Shift(30)
-and: Shift(41)
-xor: Shift(18)
-ori: Shift(51)
-sub: Shift(31)
+and: Shift(21)
+mv: Shift(52)
+sb: Shift(25)
+add: Shift(43)
+li: Shift(39)
+nop: Shift(38)
+not: Shift(19)
+ori: Shift(29)
 ===================
 State 1:
-addi: Shift(14)
-sub: Shift(31)
-or: Shift(36)
-xor: Shift(18)
-mv: Shift(6)
-instructions: Shift(35)
-nop: Shift(40)
-and: Shift(41)
-__$__: Reduce(ReduceDerivation { left: "instructions", right: [] })
-cmp: Shift(47)
-add: Shift(2)
-lb: Shift(10)
-sb: Shift(22)
-andi: Shift(26)
-hlt: Shift(30)
-xori: Shift(55)
-ori: Shift(51)
-not: Shift(45)
-li: Shift(59)
-instruction: Shift(1)
+register: Shift(2)
 ===================
 State 2:
-register: Shift(3)
+comma: Shift(3)
 ===================
 State 3:
-comma: Shift(4)
+number: Shift(4)
 ===================
 State 4:
-register: Shift(5)
+li: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
+add: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
+sb: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
+hlt: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
+nop: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
+cmp: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
+and: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
+addi: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
+lb: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
+not: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
+andi: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
+xor: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
+or: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
+xori: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
+mv: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
+ori: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
+sub: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
+__$__: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
 ===================
 State 5:
-sub: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
-li: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
-or: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
-xori: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
-andi: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
-mv: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
-sb: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
-ori: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
-hlt: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
-and: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
-addi: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
-lb: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
-cmp: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
-nop: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
-xor: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
-not: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
-add: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
-__$__: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
+register: Shift(6)
 ===================
 State 6:
-register: Shift(7)
+comma: Shift(7)
 ===================
 State 7:
-comma: Shift(8)
+register: Shift(8)
 ===================
 State 8:
-register: Shift(9)
+ori: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
+xori: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
+hlt: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
+xor: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
+__$__: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
+and: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
+sb: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
+addi: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
+nop: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
+not: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
+or: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
+li: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
+lb: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
+cmp: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
+add: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
+andi: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
+mv: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
+sub: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
 ===================
 State 9:
-sub: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
-xori: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
-or: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
-li: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
-nop: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
-and: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
-ori: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
-xor: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
-__$__: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
-cmp: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
-lb: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
-andi: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
-sb: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
-add: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
-not: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
-hlt: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
-mv: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
-addi: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
+register: Shift(10)
 ===================
 State 10:
-register: Shift(11)
+comma: Shift(11)
 ===================
 State 11:
-comma: Shift(12)
+register: Shift(12)
 ===================
 State 12:
-number: Shift(13)
+or: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
+hlt: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
+sub: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
+xori: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
+ori: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
+addi: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
+nop: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
+and: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
+lb: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
+__$__: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
+li: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
+cmp: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
+mv: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
+andi: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
+add: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
+not: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
+xor: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
+sb: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
 ===================
 State 13:
-ori: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
-not: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
-mv: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
-xori: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
-sb: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
-or: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
-__$__: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
-li: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
-and: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
-addi: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
-hlt: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
-sub: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
-cmp: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
-andi: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
-nop: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
-xor: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
-add: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
-lb: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
+xor: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
+andi: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
+addi: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
+mv: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
+lb: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
+nop: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
+__$__: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
+sb: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
+cmp: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
+hlt: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
+add: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
+and: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
+ori: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
+li: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
+sub: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
+not: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
+xori: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
+or: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
 ===================
 State 14:
 register: Shift(15)
@@ -340,267 +338,250 @@ State 15:
 comma: Shift(16)
 ===================
 State 16:
-number: Shift(17)
+register: Shift(17)
 ===================
 State 17:
-not: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
-xori: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
-hlt: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
-mv: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
-ori: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
-__$__: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
-and: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
-xor: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
-add: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
-addi: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
-or: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
-nop: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
-cmp: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
-andi: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
-lb: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
-sub: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
-li: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
-sb: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
+hlt: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
+andi: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
+xor: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
+li: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
+sb: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
+not: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
+or: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
+ori: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
+mv: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
+add: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
+sub: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
+nop: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
+cmp: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
+addi: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
+xori: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
+__$__: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
+and: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
+lb: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
 ===================
 State 18:
-register: Shift(19)
+__$__: Reduce(ReduceDerivation { left: "program", right: ["instructions"] })
 ===================
 State 19:
-comma: Shift(20)
+register: Shift(20)
 ===================
 State 20:
-register: Shift(21)
+xor: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
+addi: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
+or: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
+lb: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
+xori: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
+nop: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
+add: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
+hlt: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
+mv: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
+cmp: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
+ori: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
+sb: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
+__$__: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
+not: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
+sub: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
+and: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
+li: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
+andi: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
 ===================
 State 21:
-or: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
-not: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
-lb: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
-__$__: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
-cmp: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
-andi: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
-hlt: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
-nop: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
-and: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
-sub: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
-addi: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
-xori: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
-li: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
-add: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
-mv: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
-xor: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
-ori: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
-sb: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
+register: Shift(22)
 ===================
 State 22:
-register: Shift(23)
+comma: Shift(23)
 ===================
 State 23:
-comma: Shift(24)
+register: Shift(24)
 ===================
 State 24:
-number: Shift(25)
+sb: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
+li: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
+add: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
+andi: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
+lb: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
+nop: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
+and: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
+hlt: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
+cmp: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
+xor: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
+ori: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
+addi: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
+sub: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
+__$__: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
+mv: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
+not: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
+or: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
+xori: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
 ===================
 State 25:
-not: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
-lb: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
-xor: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
-or: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
-sb: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
-sub: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
-ori: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
-xori: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
-hlt: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
-andi: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
-li: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
-nop: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
-cmp: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
-__$__: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
-mv: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
-add: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
-addi: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
-and: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
+register: Shift(26)
 ===================
 State 26:
-register: Shift(27)
+comma: Shift(27)
 ===================
 State 27:
-comma: Shift(28)
+number: Shift(28)
 ===================
 State 28:
-number: Shift(29)
+__$__: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
+or: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
+xori: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
+and: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
+lb: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
+addi: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
+cmp: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
+hlt: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
+sub: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
+li: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
+sb: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
+nop: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
+mv: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
+add: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
+not: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
+andi: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
+ori: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
+xor: Reduce(ReduceDerivation { left: "instruction", right: ["sb", "register", "comma", "number"] })
 ===================
 State 29:
-sub: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
-xori: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
-cmp: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
-and: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
-addi: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
-or: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
-lb: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
-mv: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
-__$__: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
-add: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
-xor: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
-nop: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
-ori: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
-not: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
-andi: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
-sb: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
-hlt: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
-li: Reduce(ReduceDerivation { left: "instruction", right: ["andi", "register", "comma", "number"] })
+register: Shift(30)
 ===================
 State 30:
-add: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
-__$__: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
-hlt: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
-sub: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
-and: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
-xor: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
-li: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
-not: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
-sb: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
-mv: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
-andi: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
-xori: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
-nop: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
-or: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
-ori: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
-addi: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
-cmp: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
-lb: Reduce(ReduceDerivation { left: "instruction", right: ["hlt"] })
+comma: Shift(31)
 ===================
 State 31:
-register: Shift(32)
+number: Shift(32)
 ===================
 State 32:
-comma: Shift(33)
+cmp: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
+and: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
+andi: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
+lb: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
+mv: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
+addi: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
+add: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
+sub: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
+ori: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
+li: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
+__$__: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
+xori: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
+not: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
+nop: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
+xor: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
+or: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
+hlt: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
+sb: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
 ===================
 State 33:
-register: Shift(34)
+__$__: Reduce(ReduceDerivation { left: "S", right: ["program"] })
 ===================
 State 34:
-add: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
-addi: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
-__$__: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
-li: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
-mv: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
-sb: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
-sub: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
-xori: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
-andi: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
-or: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
-ori: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
-xor: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
-cmp: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
-hlt: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
-and: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
-lb: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
-not: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
-nop: Reduce(ReduceDerivation { left: "instruction", right: ["sub", "register", "comma", "register"] })
+register: Shift(35)
 ===================
 State 35:
-__$__: Reduce(ReduceDerivation { left: "instructions", right: ["instruction", "instructions"] })
+comma: Shift(36)
 ===================
 State 36:
 register: Shift(37)
 ===================
 State 37:
-comma: Shift(38)
+li: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
+ori: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
+xori: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
+add: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
+cmp: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
+lb: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
+hlt: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
+and: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
+or: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
+sub: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
+not: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
+sb: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
+andi: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
+nop: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
+xor: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
+mv: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
+__$__: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
+addi: Reduce(ReduceDerivation { left: "instruction", right: ["xor", "register", "comma", "register"] })
 ===================
 State 38:
-register: Shift(39)
-===================
-State 39:
-ori: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
-xori: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
-sb: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
-add: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
-cmp: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
-and: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
-not: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
-lb: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
-xor: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
-hlt: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
-sub: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
-mv: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
-nop: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
-li: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
-__$__: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
-or: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
-andi: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
-addi: Reduce(ReduceDerivation { left: "instruction", right: ["or", "register", "comma", "register"] })
-===================
-State 40:
 addi: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
-cmp: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
-hlt: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
-not: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
-and: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
-andi: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
-xori: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
-mv: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
 nop: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
-__$__: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
-xor: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
-sb: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
-li: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
-or: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
-add: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
+andi: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
+not: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
 lb: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
 sub: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
+xori: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
+or: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
+__$__: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
+mv: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
+hlt: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
 ori: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
+and: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
+sb: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
+add: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
+li: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
+cmp: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
+xor: Reduce(ReduceDerivation { left: "instruction", right: ["nop"] })
+===================
+State 39:
+register: Shift(40)
+===================
+State 40:
+comma: Shift(41)
 ===================
 State 41:
-register: Shift(42)
+number: Shift(42)
 ===================
 State 42:
-comma: Shift(43)
+addi: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
+or: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
+not: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
+sub: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
+and: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
+add: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
+nop: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
+mv: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
+andi: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
+li: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
+xori: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
+hlt: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
+cmp: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
+lb: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
+sb: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
+xor: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
+ori: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
+__$__: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
 ===================
 State 43:
 register: Shift(44)
 ===================
 State 44:
-xori: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
-and: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
-ori: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
-sb: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
-cmp: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
-__$__: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
-nop: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
-add: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
-sub: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
-not: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
-li: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
-mv: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
-hlt: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
-andi: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
-addi: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
-or: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
-xor: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
-lb: Reduce(ReduceDerivation { left: "instruction", right: ["and", "register", "comma", "register"] })
+comma: Shift(45)
 ===================
 State 45:
 register: Shift(46)
 ===================
 State 46:
-mv: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
-not: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
-and: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
-or: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
-sb: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
-xor: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
-andi: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
-ori: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
-xori: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
-li: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
-hlt: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
-lb: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
-__$__: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
-sub: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
-add: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
-nop: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
-addi: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
-cmp: Reduce(ReduceDerivation { left: "instruction", right: ["not", "register"] })
+xori: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
+nop: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
+andi: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
+sb: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
+cmp: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
+or: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
+not: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
+li: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
+mv: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
+and: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
+ori: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
+xor: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
+sub: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
+addi: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
+hlt: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
+__$__: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
+add: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
+lb: Reduce(ReduceDerivation { left: "instruction", right: ["add", "register", "comma", "register"] })
 ===================
 State 47:
 register: Shift(48)
@@ -609,120 +590,139 @@ State 48:
 comma: Shift(49)
 ===================
 State 49:
-register: Shift(50)
+number: Shift(50)
 ===================
 State 50:
-not: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
-cmp: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
-nop: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
-lb: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
-andi: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
-xori: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
-__$__: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
-hlt: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
-and: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
-ori: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
-sub: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
-addi: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
-xor: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
-sb: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
-mv: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
-or: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
-li: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
-add: Reduce(ReduceDerivation { left: "instruction", right: ["cmp", "register", "comma", "register"] })
+addi: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
+nop: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
+and: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
+andi: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
+hlt: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
+add: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
+not: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
+sub: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
+ori: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
+xor: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
+cmp: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
+mv: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
+__$__: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
+li: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
+or: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
+lb: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
+xori: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
+sb: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
 ===================
 State 51:
-register: Shift(52)
+add: Shift(43)
+instruction: Shift(51)
+__$__: Reduce(ReduceDerivation { left: "instructions", right: [] })
+nop: Shift(38)
+lb: Shift(61)
+sub: Shift(5)
+andi: Shift(1)
+sb: Shift(25)
+or: Shift(14)
+xor: Shift(34)
+mv: Shift(52)
+hlt: Shift(13)
+addi: Shift(56)
+instructions: Shift(60)
+xori: Shift(47)
+ori: Shift(29)
+cmp: Shift(9)
+li: Shift(39)
+and: Shift(21)
+not: Shift(19)
 ===================
 State 52:
-comma: Shift(53)
+register: Shift(53)
 ===================
 State 53:
-number: Shift(54)
+comma: Shift(54)
 ===================
 State 54:
-xori: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
-li: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
-hlt: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
-sb: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
-and: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
-nop: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
-ori: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
-andi: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
-mv: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
-not: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
-cmp: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
-xor: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
-sub: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
-addi: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
-or: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
-lb: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
-__$__: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
-add: Reduce(ReduceDerivation { left: "instruction", right: ["ori", "register", "comma", "number"] })
+register: Shift(55)
 ===================
 State 55:
-register: Shift(56)
+add: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
+sb: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
+hlt: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
+and: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
+or: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
+mv: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
+xor: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
+not: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
+nop: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
+addi: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
+li: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
+andi: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
+sub: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
+__$__: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
+lb: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
+cmp: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
+ori: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
+xori: Reduce(ReduceDerivation { left: "instruction", right: ["mv", "register", "comma", "register"] })
 ===================
 State 56:
-comma: Shift(57)
+register: Shift(57)
 ===================
 State 57:
-number: Shift(58)
+comma: Shift(58)
 ===================
 State 58:
-ori: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
-sub: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
-hlt: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
-__$__: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
-and: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
-add: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
-mv: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
-addi: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
-sb: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
-andi: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
-nop: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
-li: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
-lb: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
-cmp: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
-not: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
-or: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
-xor: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
-xori: Reduce(ReduceDerivation { left: "instruction", right: ["xori", "register", "comma", "number"] })
+number: Shift(59)
 ===================
 State 59:
-register: Shift(60)
+add: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
+li: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
+addi: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
+sb: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
+or: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
+cmp: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
+andi: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
+ori: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
+not: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
+nop: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
+xori: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
+xor: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
+and: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
+lb: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
+sub: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
+mv: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
+hlt: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
+__$__: Reduce(ReduceDerivation { left: "instruction", right: ["addi", "register", "comma", "number"] })
 ===================
 State 60:
-comma: Shift(61)
+__$__: Reduce(ReduceDerivation { left: "instructions", right: ["instruction", "instructions"] })
 ===================
 State 61:
-number: Shift(62)
+register: Shift(62)
 ===================
 State 62:
-mv: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
-nop: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
-xori: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
-add: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
-or: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
-sub: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
-li: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
-__$__: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
-hlt: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
-andi: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
-not: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
-cmp: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
-xor: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
-lb: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
-sb: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
-and: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
-ori: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
-addi: Reduce(ReduceDerivation { left: "instruction", right: ["li", "register", "comma", "number"] })
+comma: Shift(63)
 ===================
 State 63:
-__$__: Reduce(ReduceDerivation { left: "program", right: ["instructions"] })
+number: Shift(64)
 ===================
 State 64:
-__$__: Reduce(ReduceDerivation { left: "S", right: ["program"] })
+sub: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
+xor: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
+nop: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
+ori: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
+addi: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
+mv: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
+lb: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
+andi: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
+sb: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
+not: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
+hlt: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
+__$__: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
+cmp: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
+add: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
+or: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
+xori: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
+and: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
+li: Reduce(ReduceDerivation { left: "instruction", right: ["lb", "register", "comma", "number"] })
 ===================
 State 65:
 __$__: Reduce(ReduceDerivation { left: "__DUMMY_START__", right: ["S"] })

@@ -35,7 +35,7 @@
     Register = r[0-8]
     Comment = ((;|#){Asciis}*\n)
     Comma = ,
-    Error = {Asciis}*
+    Error = {Asciis}
 %%
     {Instruction} -> |s|{
         self.tokens.borrow_mut().push(LexToken::build(s.into(), s.into()));
@@ -53,7 +53,7 @@
                     .push(LexToken::build("number".into(), (num as u8).to_string()));
             }
             Err(e) => {
-                println!("invalid operator number: {}, error_msg: {}", s, e);
+                panic!("invalid operator number: {}, {}", s, e);
             }
         }
     } ;;
@@ -65,7 +65,7 @@
                     .push(LexToken::build("number".into(), num.to_string()));
             }
             Err(e) => {
-                println!("invalid operator number: {}, error_msg: {}", s, e);
+                panic!("invalid operator number: {}, {}", s, e);
             }
         }
     } ;;
@@ -73,6 +73,9 @@
     } ;;
     {Comma} -> |s|{
         self.tokens.borrow_mut().push(LexToken::build("comma".into(), s.into()));
+    } ;;
+    {Error} -> |s|{
+        panic!("invalid token: {}", s);
     } ;;
 %%
     pub tokens: std::cell::RefCell<Vec<LexToken>>,
