@@ -3,10 +3,9 @@
 # lb r2, 0x02
 # sb r2, 0x20
 
-jal r2, end
-
-li r0, 0x55
-li r1, 0xaa
+L1:
+    addi r0, 1
+    jal r1, L1
 
 not r0
 not r1
