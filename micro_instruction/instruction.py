@@ -39,121 +39,175 @@ FETCH = [
 
 instructions = {
     # mv r0, r1
-    MV: [pin.SRC_S | pin.DST_S, pin.CYC_RS],
+    MV: {
+        "micro_instructions": [pin.SRC_S | pin.DST_S, pin.CYC_RS],
+        "is_branch": False,
+    },
     # lb r0, 0x55aa
     # load byte from memory
-    LB: [
-        pin.SRC_R | pin.MAR_W,
-        pin.MC_R | pin.DST_S,
-        pin.CYC_RS,
-    ],
+    LB: {
+        "micro_instructions": [
+            pin.SRC_R | pin.MAR_W,
+            pin.MC_R | pin.DST_S,
+            pin.CYC_RS,
+        ],
+        "is_branch": False,
+    },
     # li r0, 0x55aa
-    LI: [pin.SRC_R | pin.DST_S, pin.CYC_RS],
+    LI: {
+        "micro_instructions": [pin.SRC_R | pin.DST_S, pin.CYC_RS],
+        "is_branch": False,
+    },
     # sb r0, 0x55aa
     # sb srt, dst
     # revert in asm!!!
-    SB: [
-        pin.SRC_S | pin.MDR_W,
-        pin.DST_R | pin.MAR_W,
-        pin.MC_W,
-        pin.CYC_RS,
-    ],
+    SB: {
+        "micro_instructions": [
+            pin.SRC_S | pin.MDR_W,
+            pin.DST_R | pin.MAR_W,
+            pin.MC_W,
+            pin.CYC_RS,
+        ],
+        "is_branch": False,
+    },
     # add r0, r1
-    ADD: [
-        pin.SRC_S | pin.ALU_B_W,
-        pin.DST_R | pin.SRC_W,
-        pin.SRC_S | pin.ALU_A_W,
-        pin.ALU_OP_ADD | pin.ALU_C_W | pin.PSR_W,
-        pin.ALU_C_R | pin.DST_S,
-        pin.CYC_RS,
-    ],
+    ADD: {
+        "micro_instructions": [
+            pin.SRC_S | pin.ALU_B_W,
+            pin.DST_R | pin.SRC_W,
+            pin.SRC_S | pin.ALU_A_W,
+            pin.ALU_OP_ADD | pin.ALU_C_W | pin.PSR_W,
+            pin.ALU_C_R | pin.DST_S,
+            pin.CYC_RS,
+        ],
+        "is_branch": False,
+    },
     # addi r0, 0x55
-    ADDI: [
-        pin.SRC_R | pin.ALU_B_W,
-        pin.DST_R | pin.SRC_W,
-        pin.SRC_S | pin.ALU_A_W,
-        pin.ALU_OP_ADD | pin.ALU_C_W | pin.PSR_W,
-        pin.ALU_C_R | pin.DST_S,
-        pin.CYC_RS,
-    ],
-    SUB: [
-        pin.SRC_S | pin.ALU_B_W,
-        pin.DST_R | pin.SRC_W,
-        pin.SRC_S | pin.ALU_A_W,
-        pin.ALU_OP_SUB | pin.ALU_C_W | pin.PSR_W,
-        pin.ALU_C_R | pin.DST_S,
-        pin.CYC_RS,
-    ],
-    AND: [
-        pin.SRC_S | pin.ALU_B_W,
-        pin.DST_R | pin.SRC_W,
-        pin.SRC_S | pin.ALU_A_W,
-        pin.ALU_OP_AND | pin.ALU_C_W | pin.PSR_W,
-        pin.ALU_C_R | pin.DST_S,
-        pin.CYC_RS,
-    ],
-    ANDI: [
-        pin.SRC_R | pin.ALU_B_W,
-        pin.DST_R | pin.SRC_W,
-        pin.SRC_S | pin.ALU_A_W,
-        pin.ALU_OP_AND | pin.ALU_C_W | pin.PSR_W,
-        pin.ALU_C_R | pin.DST_S,
-        pin.CYC_RS,
-    ],
-    OR: [
-        pin.SRC_S | pin.ALU_B_W,
-        pin.DST_R | pin.SRC_W,
-        pin.SRC_S | pin.ALU_A_W,
-        pin.ALU_OP_OR | pin.ALU_C_W | pin.PSR_W,
-        pin.ALU_C_R | pin.DST_S,
-        pin.CYC_RS,
-    ],
-    ORI: [
-        pin.SRC_R | pin.ALU_B_W,
-        pin.DST_R | pin.SRC_W,
-        pin.SRC_S | pin.ALU_A_W,
-        pin.ALU_OP_OR | pin.ALU_C_W | pin.PSR_W,
-        pin.ALU_C_R | pin.DST_S,
-        pin.CYC_RS,
-    ],
-    XOR: [
-        pin.SRC_S | pin.ALU_B_W,
-        pin.DST_R | pin.SRC_W,
-        pin.SRC_S | pin.ALU_A_W,
-        pin.ALU_OP_XOR | pin.ALU_C_W | pin.PSR_W,
-        pin.ALU_C_R | pin.DST_S,
-        pin.CYC_RS,
-    ],
-    XORI: [
-        pin.SRC_R | pin.ALU_B_W,
-        pin.DST_R | pin.SRC_W,
-        pin.SRC_S | pin.ALU_A_W,
-        pin.ALU_OP_XOR | pin.ALU_C_W | pin.PSR_W,
-        pin.ALU_C_R | pin.DST_S,
-        pin.CYC_RS,
-    ],
+    ADDI: {
+        "micro_instructions": [
+            pin.SRC_R | pin.ALU_B_W,
+            pin.DST_R | pin.SRC_W,
+            pin.SRC_S | pin.ALU_A_W,
+            pin.ALU_OP_ADD | pin.ALU_C_W | pin.PSR_W,
+            pin.ALU_C_R | pin.DST_S,
+            pin.CYC_RS,
+        ],
+        "is_branch": False,
+    },
+    SUB: {
+        "micro_instructions": [
+            pin.SRC_S | pin.ALU_B_W,
+            pin.DST_R | pin.SRC_W,
+            pin.SRC_S | pin.ALU_A_W,
+            pin.ALU_OP_SUB | pin.ALU_C_W | pin.PSR_W,
+            pin.ALU_C_R | pin.DST_S,
+            pin.CYC_RS,
+        ],
+        "is_branch": False,
+    },
+    AND: {
+        "micro_instructions": [
+            pin.SRC_S | pin.ALU_B_W,
+            pin.DST_R | pin.SRC_W,
+            pin.SRC_S | pin.ALU_A_W,
+            pin.ALU_OP_AND | pin.ALU_C_W | pin.PSR_W,
+            pin.ALU_C_R | pin.DST_S,
+            pin.CYC_RS,
+        ],
+        "is_branch": False,
+    },
+    ANDI: {
+        "micro_instructions": [
+            pin.SRC_R | pin.ALU_B_W,
+            pin.DST_R | pin.SRC_W,
+            pin.SRC_S | pin.ALU_A_W,
+            pin.ALU_OP_AND | pin.ALU_C_W | pin.PSR_W,
+            pin.ALU_C_R | pin.DST_S,
+            pin.CYC_RS,
+        ],
+        "is_branch": False,
+    },
+    OR: {
+        "micro_instructions": [
+            pin.SRC_S | pin.ALU_B_W,
+            pin.DST_R | pin.SRC_W,
+            pin.SRC_S | pin.ALU_A_W,
+            pin.ALU_OP_OR | pin.ALU_C_W | pin.PSR_W,
+            pin.ALU_C_R | pin.DST_S,
+            pin.CYC_RS,
+        ],
+        "is_branch": False,
+    },
+    ORI: {
+        "micro_instructions": [
+            pin.SRC_R | pin.ALU_B_W,
+            pin.DST_R | pin.SRC_W,
+            pin.SRC_S | pin.ALU_A_W,
+            pin.ALU_OP_OR | pin.ALU_C_W | pin.PSR_W,
+            pin.ALU_C_R | pin.DST_S,
+            pin.CYC_RS,
+        ],
+        "is_branch": False,
+    },
+    XOR: {
+        "micro_instructions": [
+            pin.SRC_S | pin.ALU_B_W,
+            pin.DST_R | pin.SRC_W,
+            pin.SRC_S | pin.ALU_A_W,
+            pin.ALU_OP_XOR | pin.ALU_C_W | pin.PSR_W,
+            pin.ALU_C_R | pin.DST_S,
+            pin.CYC_RS,
+        ],
+        "is_branch": False,
+    },
+    XORI: {
+        "micro_instructions": [
+            pin.SRC_R | pin.ALU_B_W,
+            pin.DST_R | pin.SRC_W,
+            pin.SRC_S | pin.ALU_A_W,
+            pin.ALU_OP_XOR | pin.ALU_C_W | pin.PSR_W,
+            pin.ALU_C_R | pin.DST_S,
+            pin.CYC_RS,
+        ],
+        "is_branch": False,
+    },
     # not r0
-    NOT: [
-        pin.DST_R | pin.SRC_W,
-        pin.SRC_S | pin.ALU_A_W,
-        pin.ALU_OP_NOT | pin.ALU_C_W | pin.PSR_W,
-        pin.ALU_C_R | pin.DST_S,
-        pin.CYC_RS,
-    ],
+    NOT: {
+        "micro_instructions": [
+            pin.DST_R | pin.SRC_W,
+            pin.SRC_S | pin.ALU_A_W,
+            pin.ALU_OP_NOT | pin.ALU_C_W | pin.PSR_W,
+            pin.ALU_C_R | pin.DST_S,
+            pin.CYC_RS,
+        ],
+        "is_branch": False,
+    },
     # cmp r0, r1
-    CMP: [
-        pin.SRC_S | pin.ALU_B_W,
-        pin.DST_R | pin.SRC_W,
-        pin.SRC_S | pin.ALU_A_W,
-        pin.ALU_OP_SUB | pin.ALU_C_W | pin.PSR_W,
-        pin.CYC_RS,
-    ],
+    CMP: {
+        "micro_instructions": [
+            pin.SRC_S | pin.ALU_B_W,
+            pin.DST_R | pin.SRC_W,
+            pin.SRC_S | pin.ALU_A_W,
+            pin.ALU_OP_SUB | pin.ALU_C_W | pin.PSR_W,
+            pin.CYC_RS,
+        ],
+        "is_branch": False,
+    },
     # jal r0, 0x55
-    JAL: [
-        pin.PC_R | pin.DST_S,
-        pin.SRC_R | pin.PC_W,
-        pin.CYC_RS,
-    ],
-    NOP: [pin.CYC_RS],
-    HLT: [pin.HLT],
+    JAL: {
+        "micro_instructions": [
+            pin.PC_R | pin.DST_S,
+            pin.SRC_R | pin.PC_W,
+            pin.CYC_RS,
+        ],
+        "is_branch": False,
+    },
+    NOP: {
+        "micro_instructions": [pin.CYC_RS],
+        "is_branch": False,
+    },
+    HLT: {
+        "micro_instructions": [pin.HLT],
+        "is_branch": False,
+    },
 }

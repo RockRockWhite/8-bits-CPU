@@ -22,8 +22,14 @@ for addr in range(0x10000):
 
     # fill instruction cycle if the instruction exists
     if ia in instruction.instructions:
-        if cyc >= fetch_len and cyc < fetch_len + len(instruction.instructions[ia]):
-            micro[addr] = instruction.instructions[ia][cyc - fetch_len]
+        micro_instructions = instruction.instructions[ia]["micro_instructions"]
+        is_branch = instruction.instructions[ia]["is_branch"]
+
+        if is_branch:
+            pass
+        else:
+            if cyc >= fetch_len and cyc < fetch_len + len(micro_instructions):
+                micro[addr] = micro_instructions[cyc - fetch_len]
 
 with open(filename, "wb") as f:
     for val in micro:
