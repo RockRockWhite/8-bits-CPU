@@ -1,8 +1,8 @@
 %{
     #[derive(Clone)]
     pub struct LexToken {
-        symbol_type: String,
-        data: String,
+        pub symbol_type: String,
+        pub data: String,
     }
 
     impl LexToken {
@@ -31,13 +31,17 @@
     HexNumber = (0x{HexDigits}{HexDigits}*)
     WhiteSpace = ( |\n|\r|\f|\t|\v)*
     String = "{Asciis}*"
-    Instruction = li|mv|lb|sb|add|addi|sub|and|andi|or|ori|xor|xori|not|cmp|nop|hlt
+    Instruction = li|mv|lb|sb|add|addi|sub|and|andi|or|ori|xor|xori|not|cmp|jal|nop|hlt
+    Tag = {Letters}({Letters}|{Digits})*
     Register = r[0-8]
     Comment = ((;|#){Asciis}*\n)
     Comma = ,
+    TagDef = {Tag}:
+    TagRef = {Tag}
     Error = {Asciis}
 %%
     {Instruction} -> |s|{
+        *self.instructions_cnt.borrow_mut() += 1;
         self.tokens.borrow_mut().push(LexToken::build(s.into(), s.into()));
     } ;;
     {Register} -> |s|{
@@ -74,8 +78,26 @@
     {Comma} -> |s|{
         self.tokens.borrow_mut().push(LexToken::build("comma".into(), s.into()));
     } ;;
+    {TagDef} -> |s|{
+        let key = s[..s.len() - 1].to_string();
+        // if tag is already defined, panic
+        if self.tags.borrow().contains_key(&key) {
+            panic!("tag '{}' is already defined", &key);
+        }
+        self.tags
+            .borrow_mut()
+            .insert(key, *self.instructions_cnt.borrow() * 3);
+    } ;;
+
+    {TagRef} -> |s|{
+        self.tokens
+            .borrow_mut()
+            .push(LexToken::build("tag".into(), s.to_string()));
+    } ;;
     {Error} -> |s|{
         panic!("invalid token: {}", s);
     } ;;
 %%
     pub tokens: std::cell::RefCell<Vec<LexToken>>,
+    pub instructions_cnt: std::cell::RefCell<u32>,
+    pub tags: std::cell::RefCell<HashMap<String, u32>>,

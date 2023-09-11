@@ -17,10 +17,12 @@
         NOT = 19,
 
         CMP = 32,
-        BE = 33,
-        BNE = 34,
-        BGE = 35,
-        BLT = 36,
+        JAL = 33,
+        JALR = 34,
+        BE = 35,
+        BNE = 36,
+        BGE = 37,
+        BLT = 38,
 
         NOP = 62,
         HLT = 63,
@@ -193,6 +195,22 @@
         let dst = Register::from_str(&datas[1]).unwrap() as u8;
         let src = Register::from_str(&datas[3]).unwrap() as u8;
         format!("{:02X} {:02X} {:02X}", Instruction::CMP as u8, dst, src)
+    } ;;
+
+    {instruction : cmp register comma register} -> |datas| {
+        println!("instruction -> cmp register comma register");
+
+        let dst = Register::from_str(&datas[1]).unwrap() as u8;
+        let src = Register::from_str(&datas[3]).unwrap() as u8;
+        format!("{:02X} {:02X} {:02X}", Instruction::CMP as u8, dst, src)
+    } ;;
+
+    {instruction : jal register comma number} -> |datas| {
+        println!("instruction -> jal register comma number");
+
+        let dst = Register::from_str(&datas[1]).unwrap() as u8;
+        let src = u8::from_str_radix(&datas[3], 10).unwrap();
+        format!("{:02X} {:02X} {:02X}", Instruction::JAL as u8, dst, src)
     } ;;
 
     {instruction : nop} -> |datas| {

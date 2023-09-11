@@ -17,10 +17,12 @@ XORI = 18
 NOT = 19
 
 CMP = 32
-BE = 33
-BNE = 34
-BGE = 35
-BLT = 36
+JAL = 33
+JALR = 34
+BE = 35
+BNE = 36
+BGE = 37
+BLT = 38
 
 NOP = 62
 HLT = 63
@@ -144,6 +146,12 @@ instructions = {
         pin.DST_R | pin.SRC_W,
         pin.SRC_S | pin.ALU_A_W,
         pin.ALU_OP_SUB | pin.ALU_C_W | pin.PSR_W,
+        pin.CYC_RS,
+    ],
+    # jal r0, 0x55
+    JAL: [
+        pin.PC_R | pin.DST_S,
+        pin.SRC_R | pin.PC_W,
         pin.CYC_RS,
     ],
     NOP: [pin.CYC_RS],

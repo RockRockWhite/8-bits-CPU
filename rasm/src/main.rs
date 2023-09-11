@@ -1,5 +1,5 @@
 use rasm::*;
-use std::{cell::RefCell, env, error::Error, fs::File, io::Read};
+use std::{cell::RefCell, collections::HashMap, env, error::Error, fs::File, io::Read};
 
 fn main() {
     // read args
@@ -25,12 +25,16 @@ fn run(args: Args) -> Result<(), Box<dyn Error>> {
     // lexical analysis
     let rlex = Rlex {
         tokens: RefCell::new(Vec::new()),
+        instructions_cnt: RefCell::new(0),
+        tags: RefCell::new(HashMap::new()),
     };
     rlex.lex(&buf);
-    let mut tokens = rlex.tokens.borrow().clone();
+
+    let mut tokens = replace_token(rlex.tokens.borrow().clone(), rlex.tags.borrow().clone());
 
     // parsing
     tokens.push(LexToken::build(RParser::END_SYMBOL.into(), "".into()));
+
     let parse_tree = RParser::new().parse(tokens).unwrap();
 
     // get code bytes
@@ -46,6 +50,25 @@ fn run(args: Args) -> Result<(), Box<dyn Error>> {
     std::fs::write(&args.output_file, bytes)?;
 
     Ok(())
+}
+
+fn replace_token(mut tokens: Vec<LexToken>, tags: HashMap<String, u32>) -> Vec<LexToken> {
+    tokens
+        .iter_mut()
+        .filter(|token| token.symbol_type == "tag")
+        .for_each(|token| {
+            let key = &token.data;
+
+            // if tag is not defined, panic
+            if !tags.contains_key(key) {
+                panic!("tag '{}' is not defined", key);
+            }
+
+            token.symbol_type = "number".into();
+            token.data = tags.get(key).unwrap().to_string();
+        });
+
+    tokens
 }
 
 struct Args {
