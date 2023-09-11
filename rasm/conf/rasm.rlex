@@ -27,14 +27,15 @@
     Uppercase = [A-Z]
     Letters = {Lowercase}|{Uppercase}
     Asciis = [ -~]
-    DecNumber = ({Digits}{Digits}*)
+    DecNumber = ({Digits}{Digits}*)|(-{Digits}{Digits}*)
     HexNumber = (0x{HexDigits}{HexDigits}*)
     WhiteSpace = ( |\n|\r|\f|\t|\v)*
     String = "{Asciis}*"
-    Instruction = li|mv|lb|sb|nop|hlt
+    Instruction = li|mv|lb|sb|add|addi|sub|and|andi|or|ori|xor|xori|not|cmp|nop|hlt
     Register = r[0-8]
-    Comment = (;{Asciis}*\n)
+    Comment = ((;|#){Asciis}*\n)
     Comma = ,
+    Error = {Asciis}*
 %%
     {Instruction} -> |s|{
         self.tokens.borrow_mut().push(LexToken::build(s.into(), s.into()));
