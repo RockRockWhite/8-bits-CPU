@@ -213,6 +213,15 @@
         format!("{:02X} {:02X} {:02X}", Instruction::BE as u8, dst, src)
     } ;;
 
+    {instruction : bne register comma number} -> |datas| {
+        println!("instruction -> bne register comma number");
+
+        let dst = Register::from_str(&datas[1]).unwrap() as u8;
+        let src = u8::from_str_radix(&datas[3], 10).unwrap();
+        format!("{:02X} {:02X} {:02X}", Instruction::BNE as u8, dst, src)
+    } ;;
+
+
     {instruction : nop} -> |datas| {
         println!("instruction -> nop");
         format!("{:02X} 00 00", Instruction::NOP as u8)
