@@ -42,4 +42,4 @@ hlt
 [RockRockWhite/RLex: lexical analyis by rust (github.com)](https://github.com/RockRockWhite/RLex)  
 [RockRockWhite/RParser: a parser tools by rust (github.com)](https://github.com/RockRockWhite/RParser)  
 
-![instruction set](README.assets/instruction set.png)
+![instruction set](README.assets/instruction_set.png)
