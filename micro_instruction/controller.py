@@ -5,6 +5,7 @@ import instruction
 filename = os.path.join(os.path.dirname(__file__), "micro.bin")
 
 micro = [pin.NOP for _ in range(0x10000)]
+fetch_len = len(instruction.FETCH)
 
 # fill the microcode with the beginning of the fetch cycle
 for addr in range(0x10000):
@@ -20,16 +21,36 @@ for addr in range(0x10000):
     if cyc < fetch_len:
         micro[addr] = instruction.FETCH[cyc]
 
-    # fill instruction cycle if the instruction exists
-    if ia in instruction.instructions:
-        micro_instructions = instruction.instructions[ia]["micro_instructions"]
-        is_branch = instruction.instructions[ia]["is_branch"]
+# fill instruction cycle for each instruction
+for ia in instruction.instructions.keys():
+    curr_instruction = instruction.instructions[ia]
+    micro_instructions = curr_instruction["micro_instructions"]
+    is_branch = curr_instruction["is_branch"]
 
+    # fill for all possible PSW values
+    for psw in range(0x10):
         if is_branch:
-            pass
+            # for branching instructions
+            cf = psw & 1
+            zf = (psw >> 1) & 1
+            sf = (psw >> 2) & 1
+
+            cond_handler_func = curr_instruction["cond_handler_func"]
+
+            if cond_handler_func(cf, zf, sf):
+                addr_base = (ia << 8) | (psw << 4)
+                for cyc in range(len(micro_instructions)):
+                    micro[addr_base | fetch_len + cyc] = micro_instructions[cyc]
+            else:
+                addr_base = (ia << 8) | (psw << 4)
+                micro[addr_base | fetch_len] = pin.CYC_RS
+
         else:
-            if cyc >= fetch_len and cyc < fetch_len + len(micro_instructions):
-                micro[addr] = micro_instructions[cyc - fetch_len]
+            # for non-branching instructions
+            addr_base = (ia << 8) | (psw << 4)
+            for cyc in range(len(micro_instructions)):
+                micro[addr_base | fetch_len + cyc] = micro_instructions[cyc]
+
 
 with open(filename, "wb") as f:
     for val in micro:

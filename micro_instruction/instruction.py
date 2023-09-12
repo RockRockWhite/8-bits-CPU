@@ -202,6 +202,15 @@ instructions = {
         ],
         "is_branch": False,
     },
+    BE: {
+        "micro_instructions": [
+            pin.PC_R | pin.DST_S,
+            pin.SRC_R | pin.PC_W,
+            pin.CYC_RS,
+        ],
+        "is_branch": True,
+        "cond_handler_func": lambda cf, zf, sf: ((zf == 1) and (cf == 0)),
+    },
     NOP: {
         "micro_instructions": [pin.CYC_RS],
         "is_branch": False,

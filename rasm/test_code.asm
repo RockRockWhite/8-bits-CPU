@@ -3,18 +3,24 @@
 # lb r2, 0x02
 # sb r2, 0x20
 
-L1:
-    addi r0, 1
-    jal r1, L1
+# L1:
+#     addi r0, 1
+#     jal r1, L1
 
-not r0
-not r1
+# not r0
+# not r1
 
-li r0, 24
-li r1, 24
-cmp r0, r1
+# li r0, 24
+# li r1, 24
+# cmp r0, r1
+# be r0, L1
 
+beg:
+    li r0, 2
+    li r1, 1
 
+    cmp r0, r1
+    be r0, beg
 
 # sub r0, r1
 # and r0, r1
