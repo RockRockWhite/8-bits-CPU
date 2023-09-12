@@ -220,6 +220,40 @@ instructions = {
         "is_branch": True,
         "cond_handler_func": lambda cf, zf, sf: (zf != 1),
     },
+    BGE: {
+        "micro_instructions": [
+            pin.PC_R | pin.DST_S,
+            pin.SRC_R | pin.PC_W,
+            pin.CYC_RS,
+        ],
+        "is_branch": True,
+        # a - b, get a >= b
+        # if not overflow
+        # then sf = 0, cf = 0
+        #
+        # if overflow
+        # then sf = 1, cf = 1
+        #
+        # so, the condition is (sf == cf)
+        "cond_handler_func": lambda cf, zf, sf: (cf == sf),
+    },
+    BLT: {
+        "micro_instructions": [
+            pin.PC_R | pin.DST_S,
+            pin.SRC_R | pin.PC_W,
+            pin.CYC_RS,
+        ],
+        "is_branch": True,
+        # a - b, get a < b
+        # if not overflow
+        # then sf = 1, cf = 0
+        #
+        # if overflow
+        # then sf = 0, cf = 1
+        #
+        # so, the condition is (sf == cf)
+        "cond_handler_func": lambda cf, zf, sf: (cf != sf),
+    },
     NOP: {
         "micro_instructions": [pin.CYC_RS],
         "is_branch": False,

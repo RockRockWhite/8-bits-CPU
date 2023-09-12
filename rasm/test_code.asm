@@ -16,13 +16,13 @@
 # be r0, L1
 
 
-    li r0, 1
+    li r0, 0
     li r1, 10
 
 loop:
     addi r0, 1
     cmp r0, r1
-    bne r3, loop
+    blt r3, loop
 
 # sub r0, r1
 # and r0, r1
