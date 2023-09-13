@@ -22,6 +22,9 @@ fn run(args: Args) -> Result<(), Box<dyn Error>> {
     let mut buf = String::new();
     f.read_to_string(&mut buf)?;
 
+    // add a newline to the end of the source code
+    buf.push('\n');
+
     // lexical analysis
     let rlex = Rlex {
         tokens: RefCell::new(Vec::new()),

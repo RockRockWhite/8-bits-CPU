@@ -37,6 +37,14 @@
         R5 = 13,
         R6 = 14,
         R7 = 15,
+        R8 = 16,
+        R9 = 17,
+        R10 = 18,
+        R11 = 19,
+        R12 = 20,
+        R13 = 21,
+        R14 = 22,
+        R15 = 23,
     }
 
     impl Register {
@@ -50,6 +58,17 @@
                 "r5" => Some(Register::R5),
                 "r6" => Some(Register::R6),
                 "r7" => Some(Register::R7),
+                "r8" => Some(Register::R8),
+                "r9" => Some(Register::R9),
+                "r10" => Some(Register::R10),
+                "r11" => Some(Register::R11),
+                "r12" => Some(Register::R12),
+                "r13" => Some(Register::R13),
+                "r14" => Some(Register::R14),
+                "r15" => Some(Register::R15),
+                "Zero" => Some(Register::R0),
+                "ra" => Some(Register::R1),
+                "sp" => Some(Register::R2),
                 _ => None,
             }
         }
