@@ -31,7 +31,7 @@
     HexNumber = (0x{HexDigits}{HexDigits}*)
     WhiteSpace = ( |\n|\r|\f|\t|\v)*
     String = "{Asciis}*"
-    Instruction = li|mv|lb|sb|add|addi|sub|and|andi|or|ori|xor|xori|not|cmp|jal|be|bne|bge|blt|nop|hlt
+    Instruction = li|mv|lb|sb|add|addi|sub|and|andi|or|ori|xor|xori|not|cmp|jal|be|bne|bge|blt|nop|hlt|\.byte
     Tag = {Letters}({Letters}|{Digits}|_)*
     Register = (r[0-9])|(r1[0-5])|(Zero)|(ra)|(sp)
     Comment = ((;|#){Asciis}*\n)
@@ -41,7 +41,15 @@
     Error = {Asciis}
 %%
     {Instruction} -> |s|{
-        *self.instructions_cnt.borrow_mut() += 1;
+        match s {
+            ".byte" => {
+                *self.instructions_cnt.borrow_mut() += 1;
+            }
+            _ => {
+                *self.instructions_cnt.borrow_mut() += 3;
+            }
+        }
+
         self.tokens.borrow_mut().push(LexToken::build(s.into(), s.into()));
     } ;;
     {Register} -> |s|{
@@ -86,7 +94,7 @@
         }
         self.tags
             .borrow_mut()
-            .insert(key, *self.instructions_cnt.borrow() * 3);
+            .insert(key, *self.instructions_cnt.borrow());
     } ;;
 
     {TagRef} -> |s|{

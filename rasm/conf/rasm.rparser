@@ -95,7 +95,6 @@
         println!("instructions -> ε");
         "".to_string()
     } ;;
-    
 
     {instruction : li register comma number} -> |datas| {
         println!("instruction -> li register comma number");
@@ -264,6 +263,13 @@
     {instruction : hlt} -> |datas| {
         println!("instruction -> hlt");
         format!("{:02X} 00 00", Instruction::HLT as u8)
+    } ;;
+
+    {instruction : .byte number} -> |datas| {
+        println!("instruction -> .byte number");
+
+        let byte = u8::from_str_radix(&datas[1], 10).unwrap();
+        format!("{:02X}", byte)
     } ;;
 %%
     pub gen_code: Vec<u8>,
