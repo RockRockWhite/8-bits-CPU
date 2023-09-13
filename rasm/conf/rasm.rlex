@@ -36,10 +36,16 @@
     Register = (r[0-9])|(r1[0-5])|(Zero)|(ra)|(sp)
     Comment = ((;|#){Asciis}*\n)
     Comma = ,
+    Paren = \(|\)
     TagDef = {Tag}:
     TagRef = {Tag}
     Error = {Asciis}
 %%
+    {Paren} -> |s|{
+        self.tokens
+            .borrow_mut()
+            .push(LexToken::build(s.into(), s.into()));
+    } ;;
     {Instruction} -> |s|{
         match s {
             ".byte" => {

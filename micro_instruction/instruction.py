@@ -43,28 +43,28 @@ instructions = {
         "micro_instructions": [pin.SRC_S | pin.DST_S, pin.CYC_RS],
         "is_branch": False,
     },
-    # lb r0, 0x55aa
+    # lb r0, (0xaa)
     # load byte from memory
     LB: {
         "micro_instructions": [
-            pin.SRC_R | pin.MAR_W,
+            pin.SRC_S | pin.MAR_W,
             pin.MC_R | pin.DST_S,
             pin.CYC_RS,
         ],
         "is_branch": False,
     },
-    # li r0, 0x55aa
+    # li r0, 0xaa
     LI: {
         "micro_instructions": [pin.SRC_R | pin.DST_S, pin.CYC_RS],
         "is_branch": False,
     },
-    # sb r0, 0x55aa
-    # sb srt, dst
-    # revert in asm!!!
+    # sb r0, (0x5a)
+    # store byte to memory
     SB: {
         "micro_instructions": [
+            pin.SRC_S | pin.MAR_W,
+            pin.DST_R | pin.SRC_W,
             pin.SRC_S | pin.MDR_W,
-            pin.DST_R | pin.MAR_W,
             pin.MC_W,
             pin.CYC_RS,
         ],

@@ -32,12 +32,25 @@
 # li r14, 14
 # li r15, 15
 
-    li r3, 0
-    li r4, 10
-loop:
-    addi r3, 1
-    cmp r3, r4
-    blt Zero, loop
+# # test branch
+#     li r3, 0
+#     li r4, 10
+# loop:
+#     addi r3, 1
+#     cmp r3, r4
+#     blt Zero, loop
+
+# test stack
+li sp, stack_top
+addi sp, -3
+
+
+mv r8, sp
+lb r3, (r8)
+
+addi r8, 1
+li r4, 6
+sb r4, (r8)
 
 # sub r0, r1
 # and r0, r1
@@ -53,8 +66,8 @@ end:
     nop
     hlt
 
-stack_top:
+stack_bottom:
     .byte 0x1
     .byte 0x2
     .byte 0x3
-stack_bottom:
+stack_top:

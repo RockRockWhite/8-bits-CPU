@@ -112,19 +112,19 @@
         format!("{:02X} {:02X} {:02X}", Instruction::MV as u8, dst, src)
     } ;;
 
-    {instruction : lb register comma number} -> |datas| {
-        println!("instruction -> lb register comma number");
+    {instruction : lb register comma ( register )} -> |datas| {
+        println!("instruction -> lb register comma ( register )");
 
         let dst = Register::from_str(&datas[1]).unwrap() as u8;
-        let src = u8::from_str_radix(&datas[3], 10).unwrap();
+        let src = Register::from_str(&datas[4]).unwrap() as u8;
         format!("{:02X} {:02X} {:02X}", Instruction::LB as u8, dst, src)
     } ;;
 
-    {instruction : sb register comma number} -> |datas| {
-        println!("instruction -> sb register comma number");
+    {instruction : sb register comma ( register )} -> |datas| {
+        println!("instruction -> sb register comma ( register )");
 
-        let src = Register::from_str(&datas[1]).unwrap() as u8;
-        let dst = u8::from_str_radix(&datas[3], 10).unwrap();
+        let dst = Register::from_str(&datas[1]).unwrap() as u8;
+        let src = Register::from_str(&datas[4]).unwrap() as u8;
         format!("{:02X} {:02X} {:02X}", Instruction::SB as u8, dst, src)
     } ;;
 
