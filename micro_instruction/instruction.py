@@ -202,6 +202,15 @@ instructions = {
         ],
         "is_branch": False,
     },
+    # jalr r0, r1
+    JALR: {
+        "micro_instructions": [
+            pin.PC_R | pin.DST_S,
+            pin.SRC_S | pin.PC_W,
+            pin.CYC_RS,
+        ],
+        "is_branch": False,
+    },
     BE: {
         "micro_instructions": [
             pin.PC_R | pin.DST_S,

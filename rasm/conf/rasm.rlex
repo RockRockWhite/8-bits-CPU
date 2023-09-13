@@ -31,7 +31,7 @@
     HexNumber = (0x{HexDigits}{HexDigits}*)
     WhiteSpace = ( |\n|\r|\f|\t|\v)*
     String = "{Asciis}*"
-    Instruction = li|mv|lb|sb|add|addi|sub|and|andi|or|ori|xor|xori|not|cmp|jal|be|bne|bge|blt|nop|hlt|\.byte
+    Instruction = li|mv|lb|sb|add|addi|sub|and|andi|or|ori|xor|xori|not|cmp|jal|jalr|be|bne|bge|blt|nop|hlt|\.byte
     Tag = {Letters}({Letters}|{Digits}|_)*
     Register = (r[0-9])|(r1[0-5])|(Zero)|(ra)|(sp)
     Comment = ((;|#){Asciis}*\n)

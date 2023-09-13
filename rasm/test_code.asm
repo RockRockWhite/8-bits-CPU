@@ -40,17 +40,29 @@
 #     cmp r3, r4
 #     blt Zero, loop
 
-# test stack
-li sp, stack_top
-addi sp, -3
+# # test stack
+# li sp, stack_top
+# addi sp, -3
 
 
-mv r8, sp
-lb r3, (r8)
+# test jalr
+li r1, 1
+li r2, 2
+# li r8, jalrt
+# jalr Zero, r8
 
-addi r8, 1
-li r4, 6
-sb r4, (r8)
+
+li r3, 3
+li r4, 4
+
+
+
+# mv r8, sp
+# lb r3, (r8)
+
+# addi r8, 1
+# li r4, 6
+# sb r4, (r8)
 
 # sub r0, r1
 # and r0, r1
@@ -65,6 +77,11 @@ sb r4, (r8)
 end:
     nop
     hlt
+
+jalrt:
+    li r3, 5
+    li r4, 6
+    jal Zero, end
 
 stack_bottom:
     .byte 0x1

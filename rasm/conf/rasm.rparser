@@ -223,6 +223,14 @@
         format!("{:02X} {:02X} {:02X}", Instruction::JAL as u8, dst, src)
     } ;;
 
+    {instruction : jalr register comma register} -> |datas| {
+        println!("instruction -> jalr register comma register");
+
+        let dst = Register::from_str(&datas[1]).unwrap() as u8;
+        let src = Register::from_str(&datas[3]).unwrap() as u8;
+        format!("{:02X} {:02X} {:02X}", Instruction::JALR as u8, dst, src)
+    } ;;
+
     {instruction : be register comma number} -> |datas| {
         println!("instruction -> be register comma number");
 

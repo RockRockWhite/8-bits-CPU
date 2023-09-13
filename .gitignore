@@ -2,3 +2,4 @@ target/
 rasm_lex.rs
 rasm_parser.rs
 .DS_Store
+.vscode
